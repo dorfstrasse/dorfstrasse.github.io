@@ -1,0 +1,32 @@
+<header id="header" class="{{'sticky-top' if active_page == 'detail listing beli' }} {{'fixed-top' if active_page != 'detail listing beli' }} d-flex justify-content-center align-items-center header-transparent header-scrolled">
+    <div class="width-80 d-flex justify-content-between align-items-center">
+
+        <a class="logo" href="{{ url_for('home')}}">
+            <img src="{{ url_for('static', filename='img/era-sky-silver01.png') }}" alt="logo"/>
+        </a>
+
+        <nav id="navbar" class="navbar">
+        <ul>
+            <li><a class="menu" href="{{ url_for('beli')}}">BELI</a></li>
+            <li><a class="menu" href="{{ url_for('sewa')}}">SEWA</a></li>
+            <li class="dropdown"><a class="menu {{'active' if active_page == 'agen kami'}}">AGEN KAMI <i class="bi bi-chevron-down"></i></a>
+            <ul>
+                <li><a href="{{ url_for('agen_kami_sb')}}">SUMMARECON BEKASI</a></li>
+                <li><a href="{{ url_for('agen_kami_hi')}}">HARAPAN INDAH BEKASI</a></li>
+            </ul>
+            </li>
+            <li><a class="menu" href="{{ url_for('properti_baru')}}">PROPERTI BARU</a></li>
+            <li><a class="menu" href="{{ url_for('project')}}">PROJECT</a></li>
+            <li><a class="menu" href="{{ url_for('berita')}}">BERITA</a></li>
+            <li><a class="menu" href="{{ url_for('tentang_kami')}}">TENTANG KAMI</a></li>
+            <li><a class="menu" href="{{ url_for('join_us')}}">JOIN US</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+
+        <div class="btn">
+            <a class="button-login" href="{{ url_for('login')}}">LOG IN</a>
+        </div>
+
+    </div>
+</header>
