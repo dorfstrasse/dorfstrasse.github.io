@@ -5,7 +5,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: white;
   /* background-color: #28262E; */
-  background-color: rgb(35, 35, 35);;
+  background-color: rgb(35, 35, 35);
 }
 
 a {
@@ -3386,7 +3386,7 @@ Error
 ----------------------------------- */
 
 .error-page {
-  background-color: #DE1A32;
+  background-color: rgb(35, 35, 35);
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -3394,6 +3394,7 @@ Error
 
 .error-page h1 {
   font-size: 12rem;
+  font-weight: 500;
 }
 .error-page h2 {
   font-size: 27px;
@@ -3403,8 +3404,17 @@ Error
   font-weight: 200;
 }
 .error-page a {
-  font-size: 25px;
-  text-decoration: underline;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 15px 20px;
+  font-size: 20px;
+  transition: all 0.5s;
+}
+.error-page a:hover {
+  background-color: white;
+  color: rgb(35, 35, 35);
+  transition: all 0.5s;
 }
 
 .error-handler {
