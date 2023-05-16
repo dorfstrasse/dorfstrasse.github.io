@@ -1,7 +1,7 @@
 Flask==2.2.3
 Flask_Bootstrap==3.3.7.1
 Flask_WTF==1.1.1
-psycopg2==2.9.5
+psycopg2-binary==2.9.5
 python_bcrypt==0.3.2
 Werkzeug==2.2.3
 WTForms==3.0.1
