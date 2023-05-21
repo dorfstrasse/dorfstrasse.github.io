@@ -27,7 +27,7 @@ dropdowns.forEach(dropdown => {
     });
   });
 });
-
+//==================================================================================
 function onlyNumberKey(evt) {
               
   // Only ASCII character in that range allowed
@@ -36,8 +36,7 @@ function onlyNumberKey(evt) {
       return false;
   return true;
 }
-
-
+//==================================================================================
 const filters = document.querySelectorAll('.search-set');
 
 filters.forEach(dropdown => {
@@ -49,8 +48,8 @@ filters.forEach(dropdown => {
     filterlist.classList.toggle('filter-open');
   });
 });
-
-var swiper = new Swiper(".agent-list", {
+//==================================================================================
+var swiper1 = new Swiper(".swiping", {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
@@ -64,6 +63,18 @@ var swiper = new Swiper(".agent-list", {
   },
 });
 
+var swiper2 = new Swiper(".stiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  freeMode: true,
+});
+
+var swiper3 = new Swiper(".navbar-mobile", {
+  slidesPerView: 'auto',
+  spaceBetween: 0,
+  freeMode: true,
+});
+//==================================================================================
 const tabs = document.querySelectorAll('.tab-btn');
 const all_content = document.querySelectorAll('.detail-content');
 
@@ -76,17 +87,26 @@ tabs.forEach((tab, index) => {
     all_content[index].classList.add('active');
   });
 });
-
+//==================================================================================
 const activePage = window.location.pathname.split('/')[1];
-const navLinks = document.querySelectorAll('nav li a').forEach(link => {
-  if(link.href.includes(`${activePage}`)){
-    link.classList.add('active')
-  }
-  else if (!link.href.includes(`${activePage}`)){
-    link.classList.remove('active')
-  };
+const navLinks = document.querySelectorAll('nav li a');
+
+// Hapus kelas "active" dari semua elemen navbar
+navLinks.forEach(link => {
+  link.classList.remove('active');
 });
 
+// Tambahkan kelas "active" pada elemen yang sesuai dengan halaman aktif
+if (activePage !== "") {
+  navLinks.forEach(link => {
+    if (link.href.includes(`${activePage}`)) {
+      link.classList.add('active');
+    }
+  });
+};
+//==================================================================================
 var titleElement = document.querySelector('.left-title h2');
 var propertyTitle = titleElement.textContent;
 document.title = propertyTitle;
+
+//==================================================================================
