@@ -233,7 +233,7 @@ const ul_link = document.querySelector('.links');
 const menuItems = document.querySelectorAll('.links li');
 
 function toggleNavbarClass() {
-  if (window.innerWidth <= 1024) {
+  if (window.innerWidth <= 1000) {
     navbar.classList.add('swiper');
     navbar.classList.add('navbar-mobile');
     ul_link.classList.add('swiper-wrapper');

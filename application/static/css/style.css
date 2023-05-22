@@ -232,7 +232,7 @@ h6,
   padding-bottom: 5px;
 }
 
-#header .button-login {
+.button {
   border: none;
   border-radius: 5px;
   background-color: #DE1A32;
@@ -242,15 +242,11 @@ h6,
   transition: all 0.5s;
 }
 
-#header .button-login:hover {
+.button:hover {
   border: none;
   background-color: #920338;
   transition: all 0.5s;
 }
-
-/* #header .logo {
-  padding-top: 35px;
-} */
 
 #header .btn {
   position: relative;
@@ -258,7 +254,6 @@ h6,
   align-items: center;
   justify-content: space-between;
   padding: 0;
-  font-family: "Poppins", sans-serif;
   font-size: 17px;
   font-weight: 500;
   white-space: nowrap;
@@ -289,14 +284,6 @@ h6,
     padding: 20px 0px 20px 15px;
     border-radius: 5px;
     justify-content: center;
-  }
-
-  #header .navbar a {
-    font-size: 12px;
-  }
-
-  #header .navbar i {
-    font-size: 12px;
   }
 
   #header .button-login {
@@ -352,14 +339,38 @@ h6,
     transition: 0.5s;
   }
 
+  /* .navbar a i,
+  .navbar a:focus i {
+    font-size: 16px;
+    line-height: 0;
+  } */
+
   .navbar .links{
     gap: 20px;
   }
+
+  .button {
+    border: none;
+    border-radius: 5px;
+    background-color: #DE1A32;
+    color: white;
+    font-weight: 500;
+    padding: 7px 25px;
+    transition: all 0.5s;
+  }
+  
+  .button:hover {
+    border: none;
+    background-color: #920338;
+    transition: all 0.5s;
+  }
 }
 
-@media (max-width: 1220px) and (min-width: 769px){
+@media (max-width: 1220px) and (min-width: 1001px){
   .navbar a,
-  .navbar a:focus {
+  .navbar a:focus,
+  .navbar a i,
+  .navbar a:focus i {
     font-size: 15px;
   }
 
@@ -383,25 +394,13 @@ h6,
   }
 }
 
-#home .swiper {
-  width: 100%;
-  height: 50vh;
-}
-
-#home .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #302F34;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#home .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+@media (max-width: 1000px) {
+  .navbar a,
+  .navbar a:focus,
+  .navbar i,
+  .navbar a:focus i {
+    font-size: 12px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -423,12 +422,6 @@ h6,
 .navbar li {
   position: relative;
   justify-content: space-between;
-}
-
-.navbar a i,
-.navbar a:focus i {
-  font-size: 16px;
-  line-height: 0;
 }
 
 .navbar a:hover,
@@ -618,7 +611,6 @@ h6,
   overflow: hidden;
   position: relative;
   text-align: center;
-  /* margin-top: 70px; */
 }
 
 #home1::before {
@@ -640,14 +632,7 @@ h6,
 
 #home1 p {
   color: #fff;
-  font-size: 20px;
-}
-
-#home1 .row h2 {
-  color: #fff;
-  margin-bottom: 15px;
-  font-size: 48px;
-  font-weight: 600;
+  font-size: 17px;
 }
 
 #home1 .row .section-title h2 {
@@ -656,11 +641,6 @@ h6,
   font-weight: 400;
   position: relative;
   justify-content: center;
-}
-
-#home1 .row p {
-  color: #fff;
-  font-size: 17px;
 }
 
 #home2 {
@@ -939,6 +919,47 @@ h6,
 @media (max-width: 575px) {
   #home1 h2 {
     font-size: 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #home1 h2 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 43px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 768px) {
+  #home1 h2 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 40px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 520px) {
+  #home1 h2 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 425px) {
+  #home1 h2 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 23px;
+    font-weight: 500;
+  }
+
+  #home1 p {
+    color: #fff;
+    font-size: 12px;
   }
 }
 
@@ -1292,6 +1313,16 @@ h6,
 /*--------------------------------------------------------------
 # Search
 --------------------------------------------------------------*/
+@media (max-width:1000){
+  .search-bar .input{
+    font-size: 15px;
+  }
+}
+@media (min-width:1001){
+  .search-bar .input {
+    font-size: 17px;
+  }
+}
 
 .search-bar{
   width: 100%;
@@ -1300,7 +1331,7 @@ h6,
   border: 1px solid #ffffff;
   display: flex;
   align-items: center;
-  height: 60px;
+  height: max-content;
   border-radius: 5px;
   padding: 10px;
 }
@@ -1311,30 +1342,9 @@ h6,
   flex: 1;
   border: 0;
   outline: none;
-  font-size: 17px;
   color: #ffffff;
   height: 100%;
   width: 90%;
-}
-
-.search-bar button{
-  display: flex;
-  border: none;
-  border-radius: 5px;
-  font-size: 17px;
-  color: white;
-  background-color: #DE1A32;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  height: 100%;
-  width: 10%;
-  transition: 0.5s;
-}
-
-.search-bar button:hover {
-  background-color: #920338;
-  transition: 0.5s;
 }
 
 /* Beli dan Sewa */
