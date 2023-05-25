@@ -87,39 +87,39 @@
   /**
    * Mobile nav toggle
    */
-  // on('click', '.mobile-nav-toggle', function(e) {
-  //   select('#navbar').classList.toggle('navbar-mobile')
-  //   this.classList.toggle('bi-list')
-  //   this.classList.toggle('bi-x')
-  // })
+  on('click', '.mobile-nav-toggle', function(e) {
+    select('#navbar').classList.toggle('navbar-mobile')
+    this.classList.toggle('bi-list')
+    this.classList.toggle('bi-x')
+  })
 
   /**
    * Mobile nav dropdowns activate
    */
-  // on('click', '.navbar .dropdown > a', function(e) {
-  //   if (select('#navbar').classList.contains('navbar-mobile')) {
-  //     e.preventDefault()
-  //     this.nextElementSibling.classList.toggle('dropdown-active')
-  //   }
-  // }, true)
+  on('click', '.navbar .dropdown > a', function(e) {
+    if (select('#navbar').classList.contains('navbar-mobile')) {
+      e.preventDefault()
+      this.nextElementSibling.classList.toggle('dropdown-active')
+    }
+  }, true)
 
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  // on('click', '.scrollto', function(e) {
-  //   if (select(this.hash)) {
-  //     e.preventDefault()
+  on('click', '.scrollto', function(e) {
+    if (select(this.hash)) {
+      e.preventDefault()
 
-  //     let navbar = select('#navbar')
-  //     if (navbar.classList.contains('navbar-mobile')) {
-  //       navbar.classList.remove('navbar-mobile')
-  //       let navbarToggle = select('.mobile-nav-toggle')
-  //       navbarToggle.classList.toggle('bi-list')
-  //       navbarToggle.classList.toggle('bi-x')
-  //     }
-  //     scrollto(this.hash)
-  //   }
-  // }, true)
+      let navbar = select('#navbar')
+      if (navbar.classList.contains('navbar-mobile')) {
+        navbar.classList.remove('navbar-mobile')
+        let navbarToggle = select('.mobile-nav-toggle')
+        navbarToggle.classList.toggle('bi-list')
+        navbarToggle.classList.toggle('bi-x')
+      }
+      scrollto(this.hash)
+    }
+  }, true)
 
   /**
    * Skills animation
@@ -226,29 +226,5 @@
    */
   new PureCounter();
 
-})()
-
-const navbar = document.querySelector('.navbar'); // Ganti '.navbar' dengan selector yang sesuai
-const ul_link = document.querySelector('.links');
-const menuItems = document.querySelectorAll('.links li');
-
-function toggleNavbarClass() {
-  if (window.innerWidth <= 1000) {
-    navbar.classList.add('swiper');
-    navbar.classList.add('navbar-mobile');
-    ul_link.classList.add('swiper-wrapper');
-    menuItems.forEach((menuItem) => {
-      menuItem.classList.add('swiper-slide');
-    });
-  } else {
-    navbar.classList.remove('swiper');
-    navbar.classList.remove('navbar-mobile');
-    ul_link.classList.remove('swiper-wrapper');
-    menuItems.forEach((menuItem) => {
-      menuItem.classList.remove('swiper-slide');
-    });
-  }
 }
-// Panggil fungsi toggleNavbarClass saat halaman dimuat dan saat jendela diubah ukurannya
-window.addEventListener('DOMContentLoaded', toggleNavbarClass);
-window.addEventListener('resize', toggleNavbarClass);
+)()

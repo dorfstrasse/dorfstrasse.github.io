@@ -38,6 +38,36 @@ function onlyNumberKey(evt) {
 }
 //==================================================================================
 const filters = document.querySelectorAll('.search-set');
+const navbar = document.querySelector('.navbar');
+const ul_link = document.querySelector('.links');
+const menuItems = document.querySelectorAll('.links li');
+const menu_btn = document.querySelector('.menu-btn');
+const mobile_menu = document.querySelector('.navbar-mobile')
+
+function toggleNavbarClass() {
+  if (window.innerWidth <= 859) {
+    // navbar.classList.add('swiper');
+    navbar.classList.add('navbar-mobile');
+    navbar.classList.remove('navbar');
+    // ul_link.classList.add('swiper-wrapper');
+    // menuItems.forEach((menuItem) => {
+    //   menuItem.classList.add('swiper-slide');
+    // });
+  } else {
+    // navbar.classList.remove('swiper');
+    navbar.classList.remove('navbar-mobile');
+    navbar.classList.add('navbar');
+    // ul_link.classList.remove('swiper-wrapper');
+    // menuItems.forEach((menuItem) => {
+    //   menuItem.classList.remove('swiper-slide');
+    // });
+  }
+}
+
+menu_btn.addEventListener('click', function () {
+  menu_btn.classList.toggle('is-active');
+  mobile_menu.classList.toggle('is-active');
+});
 
 filters.forEach(dropdown => {
   const filter = dropdown.querySelector('.filter-btn');
@@ -48,6 +78,9 @@ filters.forEach(dropdown => {
     filterlist.classList.toggle('filter-open');
   });
 });
+
+window.addEventListener('DOMContentLoaded', toggleNavbarClass);
+window.addEventListener('resize', toggleNavbarClass);
 //==================================================================================
 var swiper1 = new Swiper(".swiping", {
   slidesPerView: 1,
@@ -63,17 +96,17 @@ var swiper1 = new Swiper(".swiping", {
   },
 });
 
-var swiper2 = new Swiper(".stiper", {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  freeMode: true,
-});
+// var swiper2 = new Swiper(".stiper", {
+//   slidesPerView: 1,
+//   spaceBetween: 30,
+//   freeMode: true,
+// });
 
-var swiper3 = new Swiper(".navbar-mobile", {
-  slidesPerView: 'auto',
-  spaceBetween: 0,
-  freeMode: true,
-});
+// var swiper3 = new Swiper(".navbar-mobile", {
+//   slidesPerView: 'auto',
+//   spaceBetween: 0,
+//   freeMode: true,
+// });
 //==================================================================================
 const tabs = document.querySelectorAll('.tab-btn');
 const all_content = document.querySelectorAll('.detail-content');

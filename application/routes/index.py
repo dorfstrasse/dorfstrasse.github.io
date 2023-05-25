@@ -33,11 +33,6 @@ def agen_kami_hi():
 def properti_baru():
     return render_template('06-properti-baru.html')
 
-@app.route('/project', methods=['GET','POST'])
-# @cek_login
-def project():
-    return render_template('07-project.html')
-
 @app.route('/berita', methods=['GET','POST'])
 # @cek_login
 def berita():
