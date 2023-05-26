@@ -311,6 +311,10 @@ h6,
   list-style: none;
 }
 
+.navbar .dropdown .menu {
+  gap: 3px;
+}
+
 .navbar li {
   position: relative;
   justify-content: space-between;
@@ -1858,13 +1862,11 @@ Page Item
 .propbar-box .judul-propbar {
   font-weight: 500;
   margin-top: 15px;
-  font-size: 30px;
 }
 
 .propbar-box .detail-propbar {
   font-weight: 400;
   margin-top: 15px;
-  font-size: 18px;
 }
 
 /*--------------------------------------------------------------
@@ -3611,7 +3613,7 @@ Error
 }
 
 /* -----------------------------------
-# Box Mobile
+# Box
 ----------------------------------- */
 @media (min-width: 860px) {
   .box-l-1 {
