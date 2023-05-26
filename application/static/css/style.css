@@ -83,6 +83,73 @@ h6,
   opacity: 1;
 }
 
+/*--------------------------------------------------------------
+# Font
+--------------------------------------------------------------*/
+
+@media (min-width: 860px) {
+  h2 {
+    font-size: 48px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 22px;
+    font-weight: 400;
+  }
+  p {
+    font-size: 18px;
+  }
+
+  .icon {
+    width: 53px;
+    height: 53px;
+  }
+}
+
+
+@media (max-width: 859px) and (min-width: 426px) {
+  h2 {
+    font-size: 40px;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 15px;
+  }
+  
+  .icon {
+    width: 53px;
+    height: 53px;
+  }
+}
+
+@media (max-width: 425px) {
+  h2 {
+    font-size: 23px;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 17px;
+  }
+  h4 {
+    font-size: 15px;
+  }
+  p {
+    font-size: 12px;
+  }
+
+  .icon {
+    width: 45px;
+    height: 45px;
+  }
+}
 
 /*--------------------------------------------------------------
 # Login
@@ -733,13 +800,11 @@ h6,
 }
 
 .home-content .title1 {
-  font-weight: 600;
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
 .home-content .title {
-  font-weight: 600;
   margin-top: 15px;
   margin-bottom: 15px;
   font-size: 18px;
@@ -902,59 +967,6 @@ h6,
   width: 100%;
 }
 
-@media (min-width: 860px) {
-  h2 {
-    font-size: 48px;
-  }
-  h3 {
-    font-size: 30px;
-  }
-  h4 {
-    font-size: 25px;
-  }
-  p {
-    font-size: 20px;
-  }
-}
-
-
-@media (max-width: 859px) and (min-width: 426px) {
-  h2 {
-    font-size: 40px;
-    font-weight: 500;
-  }
-  h3 {
-    font-size: 25px;
-  }
-  h4 {
-    font-size: 20px;
-  }
-  p {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 425px) {
-  h2 {
-    font-size: 23px;
-    font-weight: 500;
-  }
-  h3 {
-    font-size: 17px;
-  }
-  h4 {
-    font-size: 15px;
-  }
-  p {
-    font-size: 12px;
-  }
-
-  .icon {
-    width: 45px;
-    height: 45px;
-  }
-}
-
 /*--------------------------------------------------------------
 # Beli
 --------------------------------------------------------------*/
@@ -1020,6 +1032,7 @@ h6,
 .listing-box .harga {
   font-weight: 600;
   margin-top: 15px;
+  /* font-size: 30px; */
 }
 
 .listing-box .fasilitas {
@@ -1400,8 +1413,8 @@ h6,
   align-items: center;
   height: 50px;
   border-radius: 5px;
-  padding: 8px;
 }
+
 .search-lokasi input{
   display: flex;
   background: transparent;
@@ -3601,20 +3614,65 @@ Error
 # Box Mobile
 ----------------------------------- */
 @media (min-width: 860px) {
-  
+  .box-l-1 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .box-l-2 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+  .box-l-3 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .box-l-4 {
+    flex: 0 0 auto;
+    width: 33.333333333334%;
+  }
+  .box-l-5 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
 }
 
 
 @media (max-width: 859px) and (min-width: 426px) {
-  
-}
-
-@media (max-width: 425px) {
-  .boxes-1 {
+  .box-m-1 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .box-m-2 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+  .box-m-3 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .box-m-4 {
     flex: 0 0 auto;
     width: 33.333333333334%;
   }
+}
 
+@media (max-width: 425px) {
+  .box-s-1 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .box-s-2 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+  .box-s-3 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .box-s-4 {
+    flex: 0 0 auto;
+    width: 33.333333333334%;
+  }
 }
 
 
