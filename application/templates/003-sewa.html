@@ -1,0 +1,254 @@
+{% extends 'index.html' %}
+{% set active_page = 'sewa' %}
+{% block body %}
+
+<section id="sewa" class="d-flex justify-content-center align-items-center">
+  <div class="container margin-title position-relative">
+    <div class="row justify-content-center">
+      <div class="col-xl-8">
+        <h2>SEWA PROPERTY</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main id="main">
+
+  <section id="sewa1" class="sewa-content margintop-1cm">
+    <div class="container">
+
+      <div class="row">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Cari Properti</h2>
+          <div class="search-set">
+            <div class="search-listing">
+              <form action="" class="search-bar">
+                <input class="input" type="text" placeholder="Lokasi">
+                <button class="button" type="submit">Cari</button>
+              </form>
+              <button class="filter-btn">Filter</button>
+            </div>
+            <div class="filter-search">
+  
+              <div class="dropdown-search col-lg-3 col-sm-12">
+                <div class="select">
+                  <span class="selected">Tipe Properti</span>
+                  <div class="caret"></div>
+                </div>
+                <ul class="menu-dropdown">
+                  <li>Rumah</li>
+                  <li>Ruko</li>
+                  <li>Apartemen</li>
+                  <li>Gudang-Pabrik</li>
+                  <li>Tanah-Kavling</li>
+                  <li>Apartemen</li>
+                  <li>Office-Space</li>
+                </ul>
+              </div>
+              <div class="dropdown-search col-lg-3 col-sm-12">
+                <div class="select">
+                  <span class="selected">Kondisi</span>
+                  <div class="caret"></div>
+                </div>
+                <ul class="menu-dropdown">
+                  <li>Baru</li>
+                  <li>Bagus Sekali</li>
+                  <li>Bagus</li>
+                  <li>Butuh Direnovasi</li>
+                  <li>Baru Direnovasi</li>
+                </ul>
+              </div>
+              <div class="dropdown-search col-lg-3 col-sm-12">
+                <div class="select">
+                  <span class="selected">Furnish</span>
+                  <div class="caret"></div>
+                </div>
+                <ul class="menu-dropdown">
+                  <li>Furnish</li>
+                  <li>Semi-Furnish</li>
+                  <li>Unfurnish</li>
+                </ul>
+              </div>
+              <div class="dropdown-search col-lg-3 col-sm-12">
+                <div class="select">
+                  <span class="selected">Sertifikat</span>
+                  <div class="caret"></div>
+                </div>
+                <ul class="menu-dropdown">
+                  <li>SHM (Surat Hak Milik)</li>
+                  <li>HGB (Hak Guna Bangunan)</li>
+                  <li>HS (Hak Sewa)</li>
+                  <li>HPL</li>
+                  <li>SHMSRS</li>
+                  <li>Hak Guna Usaha</li>
+                  <li>HGB diatas HPL</li>
+                  <li>Tanah Adat</li>
+                  <li>PPJB</li>
+                  <li>Girik</li>
+                  <li>Ajb</li>
+                </ul>
+              </div>
+              <div class="input-numerik col-lg-3 col-sm-12">
+                <form action="" class="filter-numerik">
+                  <p>Rp</p>
+                  <input type="text" onkeypress="return onlyNumberKey(event)" placeholder="Harga Min.">
+                </form>
+              </div>
+              <div class="input-numerik col-lg-3 col-sm-12">
+                <form action="" class="filter-numerik">
+                  <p>Rp</p>
+                  <input type="text" onkeypress="return onlyNumberKey(event)" placeholder="Harga Maks.">
+                </form>
+              </div>
+              <div class="input-numerik col-lg-3 col-sm-12">
+                <form action="" class="filter-numerik">
+                  <input type="text" onkeypress="return onlyNumberKey(event)" placeholder="Luas Min.">
+                  <p>m<sup>2</sup></p>
+                </form>
+              </div>
+              <div class="input-numerik col-lg-3 col-sm-12">
+                <form action="" class="filter-numerik">
+                  <input type="text" onkeypress="return onlyNumberKey(event)" placeholder="Luas Maks.">
+                  <p>m<sup>2</sup></p>
+                </form>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row margintop-1cm">
+        
+        <div class="box-s-3 col-md-6 box-l-4 d-flex align-items-stretch" data-aos="fade-up">
+          <a class="listing-box" href="{{ url_for('sewa_detail_listing')}}">
+            <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
+            <p class="judul">Judul</p>
+            <h4 class="harga">Rp00.000.000.000</h4>
+            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+          </a>
+        </div>
+  
+        <div class="box-s-3 col-md-6 box-l-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+          <a class="listing-box" href="{{ url_for('sewa_detail_listing')}}">
+            <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
+            <p class="judul">Judul</p>
+            <h4 class="harga">Rp00.000.000.000</h4>
+            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+          </a>
+        </div>
+  
+        <div class="box-s-3 col-md-6 box-l-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+          <a class="listing-box" href="{{ url_for('sewa_detail_listing')}}">
+            <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
+            <p class="judul">Judul</p>
+            <h4 class="harga">Rp00.000.000.000</h4>
+            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+          </a>
+        </div>
+
+        <div class="box-s-3 col-md-6 box-l-4 d-flex align-items-stretch" data-aos="fade-up">
+          <a class="listing-box" href="{{ url_for('sewa_detail_listing')}}">
+            <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
+            <p class="judul">Judul</p>
+            <h4 class="harga">Rp00.000.000.000</h4>
+            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+          </a>
+        </div>
+        
+        <div class="box-s-3 col-md-6 box-l-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+          <a class="listing-box" href="{{ url_for('sewa_detail_listing')}}">
+            <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
+            <p class="judul">Judul</p>
+            <h4 class="harga">Rp00.000.000.000</h4>
+            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+          </a>
+        </div>
+        
+        <div class="box-s-3 col-md-6 box-l-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+          <a class="listing-box" href="{{ url_for('sewa_detail_listing')}}">
+            <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
+            <p class="judul">Judul</p>
+            <h4 class="harga">Rp00.000.000.000</h4>
+            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+          </a>
+        </div>
+
+        <div class="box-s-3 col-md-6 box-l-4 d-flex align-items-stretch" data-aos="fade-up">
+          <a class="listing-box" href="{{ url_for('sewa_detail_listing')}}">
+            <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
+            <p class="judul">Judul</p>
+            <h4 class="harga">Rp00.000.000.000</h4>
+            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+          </a>
+        </div>
+        
+        <div class="box-s-3 col-md-6 box-l-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+          <a class="listing-box" href="{{ url_for('sewa_detail_listing')}}">
+            <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
+            <p class="judul">Judul</p>
+            <h4 class="harga">Rp00.000.000.000</h4>
+            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+          </a>
+        </div>
+        
+        <div class="box-s-3 col-md-6 box-l-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+          <a class="listing-box" href="{{ url_for('sewa_detail_listing')}}">
+            <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
+            <p class="judul">Judul</p>
+            <h4 class="harga">Rp00.000.000.000</h4>
+            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+          </a>
+        </div>
+
+        <div class="box-s-3 col-md-6 box-l-4 d-flex align-items-stretch" data-aos="fade-up">
+          <a class="listing-box" href="{{ url_for('sewa_detail_listing')}}">
+            <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
+            <p class="judul">Judul</p>
+            <h4 class="harga">Rp00.000.000.000</h4>
+            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+          </a>
+        </div>
+        
+        <div class="box-s-3 col-md-6 box-l-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+          <a class="listing-box" href="{{ url_for('sewa_detail_listing')}}">
+            <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
+            <p class="judul">Judul</p>
+            <h4 class="harga">Rp00.000.000.000</h4>
+            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+          </a>
+        </div>
+        
+        <div class="box-s-3 col-md-6 box-l-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+          <a class="listing-box" href="{{ url_for('sewa_detail_listing')}}">
+            <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
+            <p class="judul">Judul</p>
+            <h4 class="harga">Rp00.000.000.000</h4>
+            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+          </a>
+        </div>
+        
+      </div>
+      
+      <nav aria-label="page-navigation">
+        <ul class="pagination justify-content-center">
+          <li class="hlmn-item">
+            <a class="hlmn-link" href="#"><span aria-hidden="true">&laquo;</span>Previous</a>
+          </li>
+          <li class="hlmn-item"><a class="hlmn-link" href="#">1</a></li>
+          <li class="hlmn-item"><a class="hlmn-link" href="#">2</a></li>
+          <li class="hlmn-item"><a class="hlmn-link" href="#">3</a></li>
+          <li class="hlmn-item"><a class="hlmn-link" href="#">4</a></li>
+          <li class="hlmn-item"><a class="hlmn-link" href="#">5</a></li>
+          <li class="hlmn-item">
+            <a class="hlmn-link" href="#">Next<span aria-hidden="true">&raquo;</span></a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </section>
+
+</main>
+
+{% endblock %}

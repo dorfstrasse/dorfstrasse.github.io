@@ -5,7 +5,8 @@ body {
   font-family: "Poppins", sans-serif;
   color: white;
   /* background-color: #28262E; */
-  background-color: rgb(35, 35, 35);
+  /* background-color: rgb(35, 35, 35); */
+  background-color: rgb(24, 24, 24);
   overflow: overlay;
 }
 
@@ -64,7 +65,7 @@ h6,
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  transition: all 0.4s;
+  transition: all 0.5s;
 }
 
 .back-to-top i {
@@ -132,7 +133,7 @@ h6,
 
 @media (max-width: 425px) {
   h2 {
-    font-size: 23px;
+    font-size: 25px;
     font-weight: 500;
   }
   h3 {
@@ -257,7 +258,6 @@ h6,
   gap: 30px;
 }
 #header .logo {
-  position: sticky;
   left: 0;
   flex: 0 0 auto;
 }
@@ -270,12 +270,13 @@ h6,
   padding-bottom: 5px;
 }
 
-#header.header-transparent {
+/* #header.header-transparent {
   background: none;
-}
+} */
 
 #header.header-scrolled {
-  background: rgb(40, 38, 46);
+  /* background: rgb(35, 35, 35); */
+  background: rgb(24, 24, 24);
   height: max-content;
 }
 
@@ -562,7 +563,7 @@ h6,
     padding-bottom: 10px;
   }
   
-  .separator {
+  .separator-line {
     width: 100%;
     height: 1px;
     background-color: rgb(150, 150, 150);
@@ -714,7 +715,7 @@ h6,
   top: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(35, 35, 35, 0.65), rgba(35, 35, 35, 1)), url("../img/village.jpg") center top no-repeat;
+  background: linear-gradient(to bottom, rgba(24, 24, 24, 0.65), rgba(24, 24, 24, 1)), url("../img/village.jpg") center top no-repeat;
 }
 
 #home1 h2 {
@@ -747,7 +748,7 @@ h6,
   top: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(35, 35, 35, 1), rgba(35, 35, 35, 0.8)), url("../img/village.jpg") center top no-repeat;
+  background: linear-gradient(to bottom, rgba(24, 24, 24, 1), rgba(24, 24, 24, 0.65), rgba(24, 24, 24, 1)), url("../img/village.jpg") center top no-repeat;
 }
 
 #home2 h2 {
@@ -990,7 +991,7 @@ h6,
   top: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(35, 35, 35, 0.65), rgba(35, 35, 35, 0.8)), url("../img/village1.jpg") center top no-repeat;
+  background: linear-gradient(to bottom, rgba(24, 24, 24, 0.65), rgba(24, 24, 24, 0.8)), url("../img/village1.jpg") center top no-repeat;
 }
 
 #beli h2 {
@@ -1073,7 +1074,7 @@ h6,
   height: max-content;
   /* object-fit: cover;
   object-position: center center; */
-  background: linear-gradient(to bottom, rgba(35, 35, 35, 1), rgba(35, 35, 35, 0.8)), url("../img/village.jpg") center top no-repeat;
+  background: linear-gradient(to bottom, rgba(24, 24, 24, 1), rgba(24, 24, 24, 0.8)), url("../img/village.jpg") center top no-repeat;
 }
 
 #detail-listing .swiper {
@@ -1352,7 +1353,7 @@ h6,
   }
   .button {
     font-size: 12px;
-    padding: 3px 15px;
+    padding: 5px 17px;
   }
 }
 
@@ -1477,8 +1478,6 @@ h6,
 .dropdown-search {
   min-width: 225px;
   position: relative;
-  padding: 20px 10px 0px 10px;
-  z-index: 1;
 }
 
 .select {
@@ -1521,7 +1520,7 @@ h6,
   padding: 8px;
   background: #2F2E33;
   order: 1px #363a43 solid;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  /* box-shadow: 0 0 30px rgba(255, 255, 255, 0.5); */
   border-radius: 0.5em;
   color: #9fa5b5;
   left: 50%;
@@ -1530,7 +1529,6 @@ h6,
   opacity: 0;
   transition: 1s;
   font-size: 15px;
-  z-index: 1070;
 }
 
 .menu-dropdown li {
@@ -1551,13 +1549,12 @@ h6,
   position: absolute;
   opacity: 99;
   transition: all 1s;
-  z-index: 2;
+  z-index: 1;
 }
 
 .input-numerik {
   min-width: 225px;
   position: relative;
-  padding: 20px 10px 0px 10px;
 }
 
 .filter-numerik {
@@ -1575,6 +1572,7 @@ h6,
   font-size: 15px;
   position: relative;
   height: 50px;
+  width: 100%;
   gap: 5px;
 }
 
@@ -1618,7 +1616,7 @@ h6,
   top: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(35, 35, 35, 0.65), rgba(35, 35, 35, 0.8)), url("../img/village1.jpg") center top no-repeat;
+  background: linear-gradient(to bottom, rgba(24, 24, 24, 0.65), rgba(24, 24, 24, 0.8)), url("../img/village1.jpg") center top no-repeat;
 }
 
 #sewa h2 {
@@ -1727,7 +1725,7 @@ Page Item
   top: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(35, 35, 35, 0.65), rgba(35, 35, 35, 0.8)), url("../img/village1.jpg") center top no-repeat;
+  background: linear-gradient(to bottom, rgba(24, 24, 24, 0.65), rgba(24, 24, 24, 0.8)), url("../img/village1.jpg") center top no-repeat;
 }
 
 #agen-kami h2 {
@@ -1830,7 +1828,7 @@ Page Item
   top: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(35, 35, 35, 0.65), rgba(35, 35, 35, 0.8)), url("../img/village1.jpg") center top no-repeat;
+  background: linear-gradient(to bottom, rgba(24, 24, 24, 0.65), rgba(24, 24, 24, 0.8)), url("../img/village1.jpg") center top no-repeat;
 }
 
 #propbar h2 {
@@ -1867,6 +1865,180 @@ Page Item
 .propbar-box .detail-propbar {
   font-weight: 400;
   margin-top: 15px;
+}
+
+/*--------------------------------------------------------------
+# Create Listing
+--------------------------------------------------------------*/
+
+#create-listing {
+  position: relative;
+  z-index: 0;
+}
+
+#create-listing p {
+  margin: 0;
+}
+
+#create-listing .input-form {
+  padding: 20px;
+  background: #232323;
+  width: 100%;
+  /* height: 70vh; */
+  border-radius: 10px;
+}
+
+#create-listing form {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  justify-content: space-between;
+  gap: 35px 0px;
+}
+
+#create-listing .white-line {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#create-listing .separator-line {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(150, 150, 150);
+}
+
+#create-listing .dropdown-search {
+  padding: 0px;
+}
+
+.input-tf {
+  position: relative;
+  /* padding: 20px 10px 0px 10px; */
+  z-index: 0;
+}
+
+.input-marketing {
+  background: none;
+  backdrop-filter: blur(8px);
+  border: 1px solid #959595;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  padding: 8px;
+  height: 50px;
+  width: 100%;
+}
+
+#create-listing select {
+  background: #181818;
+  color: white;
+  height: 50px;
+  border-radius: 5px;
+}
+#create-listing option {
+  background: none;
+  color: white;
+  height: 50px;
+  border-radius: 0px;
+}
+
+@media (min-width: 860px) {
+  #create-listing .dropdown-search {
+    flex: 0 0 auto;
+    width: 30%;
+  }
+  #create-listing .input-tf {
+    flex: 0 0 auto;
+    width: 30%;
+  }
+  #create-listing .input-numerik {
+    flex: 0 0 auto;
+    width: 30%;
+  }
+  #create-listing .inp-1 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  #create-listing .inp-2 {
+    flex: 0 0 auto;
+    width: 47%;
+  }
+  #create-listing .inp-3 {
+    flex: 0 0 auto;
+    width: 30%;
+  }
+}
+
+
+@media (max-width: 859px) and (min-width: 426px) {
+  #create-listing .dropdown-search {
+    flex: 0 0 auto;
+    width: 45%;
+  }
+  #create-listing .input-tf {
+    flex: 0 0 auto;
+    width: 45%;
+  }
+  #create-listing .input-numerik {
+    flex: 0 0 auto;
+    width: 45%;
+  }
+  #create-listing .inp-1 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  #create-listing .dropdown-search {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  #create-listing .input-tf {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  #create-listing .input-numerik {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+/*--------------------------------------------------------------
+# Listing Input
+--------------------------------------------------------------*/
+#buat-listing {
+  position: relative;
+  z-index: 0;
+}
+
+#buat-listing p {
+  margin: 0;
+}
+#buat-listing tr[data-href] {
+  cursor: pointer;
+}
+
+#buat-listing .table-listing {
+  padding: 20px;
+  background: #232323;
+  width: 100%;
+  height: 70vh;
+  border-radius: 10px;
+}
+
+#buat-listing .data-listing {
+  color: white;
+}
+
+#buat-listing .ket-data {
+  color: white;
+  /* width: 100px; */
+  /* background: #DE1A32; */
+  background: #008000;
+  border-radius: 5px;
 }
 
 /*--------------------------------------------------------------
@@ -3433,10 +3605,12 @@ section {
 }
 
 #footer .footer-top {
+  position: relative;
   background: #28262E;
   /* border-top: 1px solid red; */
   /* border-bottom: 1px solid red; */
   padding: 60px 0 30px 0;
+  z-index: 0;
 }
 
 #footer .footer-top .footer-info {
@@ -3575,7 +3749,7 @@ Error
 ----------------------------------- */
 
 .error-page {
-  background-color: rgb(35, 35, 35);
+  background-color: rgb(24, 24, 24);
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -3602,7 +3776,7 @@ Error
 }
 .error-page a:hover {
   background-color: white;
-  color: rgb(35, 35, 35);
+  color: rgb(24, 24, 24);
   transition: all 0.5s;
 }
 
@@ -3771,7 +3945,7 @@ Other
 }
 
 .sticky-top {
-  background-color: rgba(40, 38, 46);
+  background-color: #232323;
   position: sticky;
   top: 0;
   right: 0;

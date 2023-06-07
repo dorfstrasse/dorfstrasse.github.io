@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>
+    Login
+  </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='img/logo-era-sky.jpg') }}" rel="icon">
+  <link href="{{ url_for('static', filename='img/logo-era-sky.jpg') }}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor/animate.css/animate.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+  <!-- <link href="{{ url_for('static', filename='css/argon-dashboard.css') }}" rel="stylesheet"> -->
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper-bundle.min.css') }}">
+
+</head>
+
+<body>
+  <main class="main-content mt-0">
+    <section>
+        <div class="page-header min-vh-100">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
+                <div class="login-card">
+                  <div class="login100-pic">
+                    <img src="{{ url_for('static', filename='img/era-sky-silver02.png') }}" class="logo" alt="SUA">
+                  </div>
+                  <div class="login-card-header">
+                    <h4 class="login-text">Log In</h4>
+                    <p class="sub-login-text">Masukkan Username dan Password anda</p>
+                  </div>
+                  <div class="login-form">
+                    <form action="{{url_for('login')}}" method="post" role="form">
+                      
+                      <div class="mb-3">
+                        <input type="text" class="login-input" name="username" autocomplete="off" placeholder="Username" aria-label="Email">
+                      </div>
+  
+                      <div class="mb-3">
+                        <input type="password" class="login-input" name="password" placeholder="Password" aria-label="Password">
+                      </div>
+  
+                      <div class="text-center">
+                        <button type="submit" class="login-btn" href="/home">Log in</button>
+                      </div>
+  
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
+                <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style="background-image: url('../static/img/village.jpg');
+            background-size: cover;">
+                  <span class="mask bg-gradient-secondary opacity-6"></span>
+                  <h4 class="mt-5 text-white font-weight-bolder position-relative">"Write Text"</h4>
+                  <p class="text-white position-relative">Write Text</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+</body>
+
+</html>

@@ -42,7 +42,7 @@ const navbar = document.querySelector('.navbar');
 const ul_link = document.querySelector('.links');
 const menuItems = document.querySelectorAll('.links li');
 const menu_btn = document.querySelector('.menu-btn');
-const mobile_menu = document.querySelector('.navbar-mobile')
+const mobile_menu = document.querySelector('.navbar-mobile');
 
 function toggleNavbarClass() {
   if (window.innerWidth <= 859) {
@@ -123,6 +123,21 @@ tabs.forEach((tab, index) => {
 //==================================================================================
 const activePage = window.location.pathname.split('/')[1];
 const navLinks = document.querySelectorAll('nav li a');
+const pageTitleMap = {
+  '': 'Era Sky Bekasi',
+  'beli': 'Beli Properti',
+  'sewa': 'Sewa Properti',
+  'properti-baru': 'Properti Baru',
+  'berita': 'Berita',
+  'agen-kami-summarecon-bekasi': 'Agen Summarecon Bekasi',
+  'agen-kami-harapan-indah': 'Agen Harapan Indah Bekasi',
+  'tentang-kami': 'Tentang Kami',
+  'join-us': 'Join Us',
+  'buat-listing': 'Buat Listing'
+};
+
+// Mengubah judul website sesuai dengan halaman aktif
+document.title = pageTitleMap[activePage] || 'Halaman Tidak Diketahui';
 
 // Hapus kelas "active" dari semua elemen navbar
 navLinks.forEach(link => {
@@ -136,10 +151,34 @@ if (activePage !== "") {
       link.classList.add('active');
     }
   });
+} if (activePage == 'beli') {
+  var titleElement = document.querySelector('.left-title h2');
+  var propertyTitle = titleElement.textContent;
+  document.title = propertyTitle;
 };
-//==================================================================================
-var titleElement = document.querySelector('.left-title h2');
-var propertyTitle = titleElement.textContent;
-document.title = propertyTitle;
+
 
 //==================================================================================
+document.addEventListener("DOMContentLoaded", () => {
+  const rows = document.querySelectorAll("tr[data-href]");
+  console.log(rows);
+  rows.forEach (row => {
+    row.addEventListener("click", () => {
+      window.location.href = row.dataset.href;
+    });
+  });
+});
+
+// // Mengambil semua elemen <tr> dalam tabel
+// var tableRows = document.getElementsByTagName('tr');
+
+// // Menambahkan fungsi klik pada setiap baris
+// for (var i = 0; i < tableRows.length; i++) {
+//   tableRows[i].addEventListener('click', function() {
+//     // Mengambil tautan dari atribut data-href
+//     var link = this.getAttribute('data-href');
+    
+//     // Membuka tautan di jendela baru/tab baru
+//     window.location.href = link;
+//   });
+// }
