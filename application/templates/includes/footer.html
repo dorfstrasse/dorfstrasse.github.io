@@ -1,88 +1,78 @@
 <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-    <!-- <div class="footer-newsletter">
-        <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            </div>
-            <div class="col-lg-6">
-            <form action="" method="post">
-                <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-            </div>
-        </div>
-        </div>
-    </div> -->
 
     <div class="footer-top">
-        <div class="container">
-            <div class="row space-between">
-
-                <div class="col-lg-3 col-md-6 footer-links company-group">
-                    <div class="footer-logo">
-                        <img class="company-logo" src="../../static/img/era-sky-silver01.png" alt="">
-                    </div>
-                    <div class="cabang-alamat">
-                        <h4>Era Sky Bekasi</h4>
-                        <div class="cabang1">
-                            <div class="text-1">
-                                <p>Summarecon</p>
-                            </div>
-                            <div class="separator">
-                                <p>:</p>
-                            </div>
-                            <div class="text-2">
-                                Ruko Ruby Blok TB no 15, <br>
-                                Summarecon Bekasi, Bekasi Utara
-                            </div>
-                        </div>
-                        <div class="cabang2">
-                            <div class="text-1">
-                                <p>Harapan Indah</p>
-                            </div>
-                            <div class="separator">
-                                <p>:</p>
-                            </div>
-                            <div class="text-2">
-                                Ruko Sentra Niaga 5-9 No. 38, <br>
-                                Pusaka Rakyat, Taruma Jaya, Bekasi
-                            </div>
-                        </div>
-                    </div>
+        <div class="row">
+            <div class="box-xl-5 box-l-2 box-m-2 box-s-1 footer-box">
+                <div class="footer-logo">
+                    <img class="company-logo" src="../../static/img/era-sky-silver01.png" alt="">
                 </div>
-
-                <div class="col-lg-3 col-md-6 footer-links">
-                <h4>Layanan Kami</h4>
-                <ul>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#">Beli</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#">Sewa</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#">Agen Kami</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#">Kantor</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#">Berita</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#">Tentang Kami</a></li>
-                </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-6 footer-info">
-                    <h4>Hubungi Kami</h4>
-                    <div class="social-links">
-                        <div class="social-media">
-                            <a href="https://www.facebook.com/erasky.bekasi?mibextid=ZbWKwL" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            Era Sky Summarecon
-                        </div>
-                        <div class="social-media margin-8px">
-                            <a href="https://instagram.com/erasky.bekasi?igshid=YmMyMTA2M2Y=" class="instagram"><i class="bx bxl-instagram"></i></a>
-                            erasky.bekasi
-                        </div>
-                        <div class="social-media margin-8px">
-                            <a href="https://www.youtube.com/@eraskysummareconbekasi4156" class="youtube"><i class="bx bxl-youtube"></i></a>
-                            Era Sky Summarecon Bekasi
-                        </div>
-                    </div>
-                </div>
-
             </div>
+
+            <div class="box-xl-4 box-l-2 box-m-2 box-s-1 footer-box">
+                <div class="cabang-alamat">
+                    <h4>Era Sky Bekasi</h4>
+                    <div class="cabang1">
+                        <div class="text-1">
+                            <p>Summarecon</p>
+                        </div>
+                        <div class="separator">
+                            <p>:</p>
+                        </div>
+                        <div class="text-2">
+                            <p>
+                                Ruko Ruby Blok TB no 15,
+                                Summarecon Bekasi, Bekasi Utara
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cabang2">
+                        <div class="text-1">
+                            <p>Harapan Indah</p>
+                        </div>
+                        <div class="separator">
+                            <p>:</p>
+                        </div>
+                        <div class="text-2">
+                            <p>
+                                Ruko Sentra Niaga 5-9 No. 38,
+                                Pusaka Rakyat, Taruma Jaya, Bekasi
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-xl-5 box-l-2 box-m-2 box-s-1 footer-box footer-links">
+            <h4>Layanan Kami</h4>
+            <ul>
+                <li><i class="bx bx-chevron-right"></i><a class="menu" href="{{ url_for('beli')}}">Beli</a></li>
+                <li><i class="bx bx-chevron-right"></i><a class="menu" href="{{ url_for('sewa')}}">Sewa</a></li>
+                <li><i class="bx bx-chevron-right"></i><a class="menu" href="{{ url_for('properti_baru')}}">Properti Baru</a></li>
+                <li><i class="bx bx-chevron-right"></i><a class="menu" href="{{ url_for('berita')}}">Berita</a></li>
+                <li><i class="bx bx-chevron-right"></i><a class="menu" href="{{ url_for('tentang_kami')}}">Tentang Kami</a></li>
+                <li><i class="bx bx-chevron-right"></i><a class="menu" href="{{ url_for('join_us')}}">Join Us</a></li>
+                <li><i class="bx bx-chevron-right"></i><a class="menu" href="{{ url_for('buat_listing')}}">Buat Listing</a></li>
+            </ul>
+            </div>
+
+            <div class="box-xl-5 box-l-2 box-m-2 box-s-1 footer-box">
+                <h4>Ikuti Kami</h4>
+                <div class="social-links">
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/erasky.bekasi?mibextid=ZbWKwL" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        Era Sky Summarecon
+                    </div>
+                    <div class="social-media margin-8px">
+                        <a href="https://instagram.com/erasky.bekasi?igshid=YmMyMTA2M2Y=" class="instagram"><i class="bx bxl-instagram"></i></a>
+                        erasky.bekasi
+                    </div>
+                    <div class="social-media margin-8px">
+                        <a href="https://www.youtube.com/@eraskysummareconbekasi4156" class="youtube"><i class="bx bxl-youtube"></i></a>
+                        Era Sky Summarecon Bekasi
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
