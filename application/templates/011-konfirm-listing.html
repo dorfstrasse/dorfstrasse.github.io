@@ -6,7 +6,7 @@
     <div class="container margin-title position-relative">
         <div class="row justify-content-center">
             <div class="col-xl-8">
-                <h2>BUAT LISTING</h2>
+                <h2>KONFIRM LISTING</h2>
             </div>
         </div>
     </div>
@@ -34,15 +34,15 @@
                           </thead>
                           <tbody>
                             {% for pl in data %}
-                            <tr data-href="{{ url_for('bl_listing_masuk', id_listing=pl.id_listing)}}">
+                            <tr data-href="{{ url_for('kl_listing_masuk', id_listing=pl.id_listing)}}">
                                 <td class="text-center">
-                                  <p class="data-listing">{{pl.waktu}}</p>
+                                  <P class="data-listing">{{pl.waktu}}</P>
                                 </td>
                                 <td class="text-center">
-                                  <p class="data-listing">{{pl.jual_sewa}}</p>
+                                  <P class="data-listing">{{pl.jual_sewa}}</P>
                                 </td>
                                 <td class="text-center">
-                                  <p class="data-listing">{{pl.judul_iklan}}</p>
+                                  <P class="data-listing">{{pl.judul_iklan}}</P>
                                 </td>
                                 <td class="text-center">
                                   <p class="data-listing">{{pl.tipe_properti}}</p>
@@ -55,9 +55,6 @@
                           </tbody>
                         </table>
                       </div>
-                    </div>
-                    <div class="tambah-listing">
-                      <a class="button" href="{{ url_for('input_listing')}}">Tambah Listing</a>
                     </div>
                 </div>
             </div>

@@ -41,49 +41,56 @@
 
 </head>
 
-<body class="login-background">
-    <header id="header" class="fixed-top">
-        <div class="logo logo-login">
-            <img class="logo-login" src="{{ url_for('static', filename='img/era-sky-silver01.png') }}" alt="logo"/>
-        </div>
-    </header>
-    <main class="login-content">
-        <section>
-            <div class="login-holder">
+<body>
+  <main class="main-content mt-0">
+    <section>
+        <div class="page-header min-vh-100">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
                 <div class="login-card">
-                    <form action="{{ url_for('login') }}" method="post" role="form">
-    
-                        <div class="marginbottom-1cm">
-                            <h2>Masuk</h2>
-                        </div>
-    
-                        <div class="input-masuk box-xl-1 box-l-1 box-m-1 box-s-1">
-                            <input id="emailLoginInput" name="email-login" class="esLoginInput" type="text" required>
-                            <label class="esLoginLabel" for="emailLoginInput">Email</label>
-                        </div>
-    
-                        <div class="input-masuk box-xl-1 box-l-1 box-m-1 box-s-1">
-                            <input id="passwordLoginInput" name="password-login" class="esLoginInput" type="password" required>
-                            <label class="esLoginLabel" for="passwordLoginInput">Password</label>
-                        </div>
-    
-                        <div class="btn-login box-xl-1 box-l-1 box-m-1 box-s-1">
-                            <button type="submit" class="button-login">Masuk</button>
-                        </div>
-
-
-                        <div class="ingat-saya box-xl-1 box-l-1 box-m-1 box-s-1">
-                            <div>
-                                <input id="checkbox" name="checkbox" class="check" type="checkbox">
-                                <label class="cb-des" for="checkbox">Ingat Saya</label>
-                            </div>
-                            <a class="lupa-password" href="">Lupa Password?</a>
-                        </div>
+                  <div class="login100-pic">
+                    <img src="{{ url_for('static', filename='img/era-sky-silver01.png') }}" class="logo" alt="SUA">
+                  </div>
+                  <div class="login-card-header">
+                    <h4 class="login-text">Log In</h4>
+                    <p class="sub-login-text">Masukkan Username dan Password anda</p>
+                  </div>
+                  <div class="login-form">
+                    <form action="{{url_for('login')}}" method="post" role="form">
+                      
+                      <div class="mb-3">
+                        <input type="text" class="login-input" name="username" autocomplete="off" placeholder="Username" aria-label="Email">
+                      </div>
+  
+                      <div class="mb-3">
+                        <input type="password" class="login-input" name="password" placeholder="Password" aria-label="Password">
+                      </div>
+  
+                      <div class="text-center">
+                        <button type="submit" class="login-btn" href="/home">Log in</button>
+                      </div>
+  
                     </form>
+                  </div>
                 </div>
+              </div>
+
+              <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
+                <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style="background-image: url('../static/img/village.jpg');
+            background-size: cover;">
+                  <span class="mask bg-gradient-secondary opacity-6"></span>
+                  <h4 class="mt-5 text-white font-weight-bolder position-relative">"Write Text"</h4>
+                  <p class="text-white position-relative">Write Text</p>
+                </div>
+              </div>
+              
             </div>
-        </section>
-    </main>
+          </div>
+        </div>
+    </section>
+  </main>
 </body>
 
 </html>

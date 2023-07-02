@@ -119,7 +119,7 @@ h6,
     font-size: 40px;
   }
   h2 {
-    font-size: 35px;
+    font-size: 40px;
   }
   h3 {
     font-size: 20px;
@@ -128,7 +128,7 @@ h6,
     font-size: 20px;
   }
   p {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .icon {
@@ -144,7 +144,6 @@ h6,
   }
   h2 {
     font-size: 40px;
-    font-weight: 500;
   }
   h3 {
     font-size: 25px;
@@ -190,6 +189,162 @@ h6,
 # Login
 --------------------------------------------------------------*/
 
+.logo-login {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.login-background {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, rgba(24, 24, 24, 0.65), rgba(24, 24, 24, 0.65)), url('../img/village.jpg') center no-repeat;
+}
+
+.login-content {
+  /* height: 100%;
+  width: 100%; */
+}
+
+.login-holder {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: rgba(24, 24, 24, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(24, 24, 24, 0.2);
+  padding: 50px;
+  height: max-content;
+}
+
+.login-card form {
+  width: 40vh;
+}
+
+
+.input-masuk {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.esLoginInput {
+  background: rgb(100, 100, 100);
+  color: white;
+  outline: none;
+  border: none;
+  padding: 25px 15px 7px 15px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.input-masuk .esLoginLabel {
+  position: absolute;
+  font-size: 17px;
+  color: rgb(190, 190, 190);
+  left: 23px;
+  top: 23px;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.esLoginInput:focus ~ .esLoginLabel,
+.esLoginInput:valid ~ .esLoginLabel {
+  top: 12px;
+  font-size: 12px;
+  color: rgb(190, 190, 190);
+}
+
+
+.button-login {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #DE1A32;
+  color: white;
+  font-weight: 500;
+  padding: 15px;
+  transition: all 0.5s;
+  width: 100%;
+}
+
+.button-login:hover {
+  border: none;
+  background-color: #920338;
+  transition: all 0.5s;
+}
+
+.ingat-saya {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.check {
+  display: none;
+  height: initial;
+  width: initial;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.check:checked + .cb-des::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 7px;
+  width: 8px;
+  height: 14px;
+  border: solid white;
+  border-width: 0px 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.cb-des {
+  position: relative;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.cb-des::before {
+  content: "";
+  background: transparent;
+  border: 1px solid white;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 10px;
+  position: relative;
+}
+
+/* .check::before {
+  content: "";
+  position: absolute;
+  background: rgb(100, 100, 100);
+  border: none;
+  height: 17px;
+  width: 17px;
+  border-radius: 5px;
+} */
+
+.lupa-password {
+  color: white;
+}
+.lupa-password:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/*------------------------------------------------------------*/
+
 .page-header {
   padding: 0;
   position: relative;
@@ -208,12 +363,6 @@ h6,
 .login100-pic img {
   /* max-width: 100%; */
   height: 150px;
-}
-
-.login-card {
-  background-color: transparent;
-  box-shadow: 0px 0px 20px 10px rgba(80, 80, 80, 0.5);
-  padding: 1.5rem;
 }
 
 .login-card-header {
@@ -493,6 +642,7 @@ h6,
   }
 
   .button {
+    cursor: pointer;
     border: none;
     border-radius: 5px;
     background-color: #DE1A32;
@@ -1044,48 +1194,6 @@ h6,
   padding-bottom: 30px;
 }
 
-.listing-box {
-  width: 100%;
-  height: max-content;
-  padding-bottom: 20px;
-  position: relative;
-  overflow: hidden;
-  margin: 0 0 40px 0;
-  border-radius: 5px;
-  background: #232323;
-  transition: all 0.5s;
-  text-align: center;
-}
-
-.listing-box:hover {
-  color: white;
-  transform: translateY(-10px);
-  transition: 0.5s;
-}
-
-.listing-box p {
-  margin: 15px 10px 0px 10px;
-  font-weight: 400;
-}
-
-.listing-box h3 {
-  font-weight: 600;
-  margin-top: 15px;
-}
-
-.listing-box .listing-img {
-  height: 60%;
-}
-
-.listing-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  overflow: hidden;
-  background: white;
-}
-
 /*--------------------------------------------------------------
 # Detail Listing
 --------------------------------------------------------------*/
@@ -1199,10 +1307,15 @@ h6,
   overflow: hidden;
 }
 
-.title-detail {
+.title-dl {
   background-color: #302F34;
   padding: 20px;
   border-radius: 5px;
+}
+
+.title-detail {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .left-title {
@@ -1219,10 +1332,10 @@ h6,
 .left-title span{
   font-weight: 200;
 }
-.left-title img {
+.fasilitas-listing img {
   height: 20px;
 }
-.left-title .fasilitas-listing {
+.fasilitas-listing {
   gap: 15px;
 }
 
@@ -1374,13 +1487,25 @@ h6,
     font-size: 18px;
     padding: 7px;
   }
+  select {
+    font-size: 18px;
+    padding: 7px;
+  }
   .menu-dropdown {
     font-size: 18px;
     padding: 7px;
   }
   .text-field {
     font-size: 18px;
+  }
+  .listing-textfield {
     padding: 7px;
+  }
+  .display-dt {
+    padding: 20px 7px 20px 7px;
+  }
+  .dt-title {
+    font-size: 15px;
   }
 }
 
@@ -1401,13 +1526,25 @@ h6,
     font-size: 16px;
     padding: 7px;
   }
+  select {
+    font-size: 16px;
+    padding: 7px;
+  }
   .menu-dropdown {
     font-size: 16px;
     padding: 7px;
   }
   .text-field {
     font-size: 16px;
+  }
+  .listing-textfield {
     padding: 7px;
+  }
+  .display-dt {
+    padding: 18px 7px 18px 7px;
+  }
+  .dt-title {
+    font-size: 13px;
   }
 }
 
@@ -1431,13 +1568,25 @@ h6,
     font-size: 15px;
     padding: 7px;
   }
+  select {
+    font-size: 15px;
+    padding: 7px;
+  }
   .menu-dropdown {
     font-size: 15px;
     padding: 7px;
   }
   .text-field {
     font-size: 15px;
+  }
+  .listing-textfield {
     padding: 7px;
+  }
+  .display-dt {
+    padding: 15px 5px 15px 5px;
+  }
+  .dt-title {
+    font-size: 12px;
   }
 }
 
@@ -1460,13 +1609,25 @@ h6,
     font-size: 12px;
     padding: 7px;
   }
+  select {
+    font-size: 12px;
+    padding: 7px;
+  }
   .menu-dropdown {
     font-size: 12px;
     padding: 7px;
   }
   .text-field {
-    font-size: 12px;
+    font-size: 15px;
+  }
+  .listing-textfield {
     padding: 7px;
+  }
+  .display-dt {
+    padding: 12px 5px 12px 5px;
+  }
+  .dt-title {
+    font-size: 12px;
   }
 }
 
@@ -1489,6 +1650,25 @@ h6,
   background-color: #920338;
   color: white;
   transition: all 0.5s;
+}
+
+.terima {
+  background: rgb(0, 72, 0);
+}
+.terima:hover {
+  background: rgb(0, 88, 0);
+}
+.minta-perbaikan {
+  background: grey;
+}
+.minta-perbaikan:hover {
+  background: grey;
+}
+.tolak {
+  background: red;
+}
+.tolak:hover {
+  background: red;
 }
 
 .search-bar{
@@ -1549,23 +1729,6 @@ h6,
   height: 100%;
 }
 
-/* .search-lokasi button{
-  display: flex;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  background-color: #DE1A32;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 7%;
-  transition: 0.5s;
-}
-.search-lokasi button:hover {
-  background-color: #920338;
-  transition: 0.5s;
-} */
-
 .filter-btn {
   border: 1px #959595 solid;
   border-radius: 5px;
@@ -1593,6 +1756,48 @@ h6,
 .dropdown-search {
   min-width: 225px;
   position: relative;
+}
+
+select {
+  background: none;
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s;
+  padding: 7px;
+  width: 100%;
+}
+
+select:hover {
+  border: none;
+}
+
+select option {
+  background: #232323;
+  border-radius: 0.5em;
+  color: #9fa5b5;
+  width: 100%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 1s;
+}
+
+option:hover {
+  color: black;
+  background-color: black;
+  cursor: pointer;
+}
+
+.dd-input {
+  border: none;
+}
+
+.drop-list:hover {
+  background: #585858;
+  cursor: pointer;
 }
 
 .select {
@@ -1631,7 +1836,6 @@ h6,
   position: absolute;
   background: #2F2E33;
   order: 1px #363a43 solid;
-  /* box-shadow: 0 0 30px rgba(255, 255, 255, 0.5); */
   border-radius: 0.5em;
   color: #9fa5b5;
   left: 50%;
@@ -1668,15 +1872,13 @@ h6,
 }
 
 .text-field {
-  background: none;
+  /* background: rgb(24, 24, 24); */
   backdrop-filter: blur(8px);
   color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px #959595 solid;
-  border-radius: 5px;
-  cursor: pointer;
+  /* border: 1px #959595 solid; */
   transition: background 0.3s;
   position: relative;
   width: 100%;
@@ -1692,6 +1894,10 @@ h6,
   color: #ffffff;
   height: 100%;
   width: 100%;
+}
+
+.listing-textfield {
+  border: 1px solid rgba(250, 250, 250, 0.5);
 }
 
 .filter-open {
@@ -1746,27 +1952,6 @@ h6,
   transition: all 0.3s ease-in-out;
   text-align: center;
 }
-
-.sewa-content .judul {
-  font-weight: 400;
-  margin-top: 15px;
-  font-size: 18px;
-}
-
-.sewa-content .harga {
-  margin-top: 15px;
-}
-
-.sewa-content .fasilitas {
-  margin-top: 15px;
-  line-height: 28px;
-  margin-bottom: 0;
-}
-
-.sewa-content .properti {
-  width: 100%;
-}
-
 
 /* -------------------------------------------------------------
 Page Item
@@ -1933,38 +2118,6 @@ Page Item
   background: linear-gradient(to bottom, rgba(24, 24, 24, 0.65), rgba(24, 24, 24, 0.8)), url("../img/village1.jpg") center top no-repeat;
 }
 
-.propbar-box {
-  width: 100%;
-  padding-bottom: 20px;
-  position: relative;
-  overflow: hidden;
-  margin: 0 0 40px 0;
-  border-radius: 5px;
-  background: #232323;
-  transition: all 0.5s;
-  text-align: center;
-}
-
-.propbar-box:hover {
-  color: white;
-  transform: translateY(-10px);
-  transition: 0.5s;
-}
-
-.propbar {
-  width: 100%;
-}
-
-.propbar-box .judul-propbar {
-  font-weight: 500;
-  margin-top: 15px;
-}
-
-.propbar-box .detail-propbar {
-  font-weight: 400;
-  margin-top: 15px;
-}
-
 /*--------------------------------------------------------------
 # Create Listing
 --------------------------------------------------------------*/
@@ -1980,10 +2133,8 @@ Page Item
 
 #create-listing .input-form {
   padding: 20px;
-  background: #232323;
+  /* background: #232323; */
   width: 100%;
-  /* height: 70vh; */
-  border-radius: 10px;
 }
 
 #create-listing .properti-input {
@@ -2011,9 +2162,14 @@ Page Item
   padding: 0px;
 }
 
+.display-dt {
+  background: #090909;
+  /* border-left: 1px solid rgba(250, 250, 250, 0.5); */
+  border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+}
+
 .input-tf {
   position: relative;
-  /* padding: 20px 10px 0px 10px; */
   z-index: 0;
 }
 
@@ -2026,20 +2182,22 @@ Page Item
   width: 100%;
 }
 
-#create-listing select {
-  background: #181818;
-  color: white;
-  height: 50px;
-  border-radius: 5px;
-}
-#create-listing option {
-  background: none;
-  color: white;
-  height: 50px;
-  border-radius: 0px;
+#create-listing .dt-title {
+  font-weight: 300;
 }
 
-@media (min-width: 860px) {
+.dt-holder {
+  display: flex;
+  gap: 5px;
+}
+
+.dt-det-listing {
+  display: flex;
+  align-items: center;
+  min-height: 27px;
+}
+
+/* @media (min-width: 860px) {
   #create-listing .dropdown-search {
     flex: 0 0 auto;
     width: 30%;
@@ -2099,10 +2257,10 @@ Page Item
     flex: 0 0 auto;
     width: 100%;
   }
-}
+} */
 
 /*--------------------------------------------------------------
-# Listing Input
+# Buat Listing
 --------------------------------------------------------------*/
 #buat-listing {
   position: relative;
@@ -2120,7 +2278,7 @@ Page Item
   padding: 20px;
   background: #232323;
   width: 100%;
-  height: 70vh;
+  height: max-content;
   border-radius: 10px;
 }
 
@@ -2132,8 +2290,13 @@ Page Item
   color: white;
   /* width: 100px; */
   /* background: #DE1A32; */
-  background: #008000;
+  /* background: #008000; */
   border-radius: 5px;
+}
+
+#buat-listing .tambah-listing {
+  display: flex;
+  justify-content: center;
 }
 
 /*--------------------------------------------------------------
@@ -3837,27 +4000,32 @@ Error
   .box-xl-1 {
     flex: 0 0 auto;
     width: 100%;
+    padding: 7px;
   }
   .box-xl-2 {
     flex: 0 0 auto;
     width: 50%;
+    padding: 7px;
   }
   .box-xl-3 {
     flex: 0 0 auto;
     width: 33.333333333334%;
+    padding: 7px;
   }
   .box-xl-4 {
     flex: 0 0 auto;
     width: 25%;
+    padding: 7px;
   }
   .box-xl-5 {
     flex: 0 0 auto;
     width: 20%;
+    padding: 7px;
   }
-
   .box-xl-6 {
     flex: 0 0 auto;
     width: 16.666666666667%;
+    padding: 7px;
   }
 }
 
@@ -3865,18 +4033,22 @@ Error
   .box-l-1 {
     flex: 0 0 auto;
     width: 100%;
+    padding: 7px;
   }
   .box-l-2 {
     flex: 0 0 auto;
     width: 50%;
+    padding: 7px;
   }
   .box-l-3 {
     flex: 0 0 auto;
     width: 33.333333333334%;
+    padding: 7px;
   }
   .box-l-4 {
     flex: 0 0 auto;
     width: 25%;
+    padding: 7px;
   }
 }
 
@@ -3885,14 +4057,17 @@ Error
   .box-m-1 {
     flex: 0 0 auto;
     width: 100%;
+    padding: 6px;
   }
   .box-m-2 {
     flex: 0 0 auto;
     width: 50%;
+    padding: 6px;
   }
   .box-m-3 {
     flex: 0 0 auto;
     width: 33.333333333334%;
+    padding: 6px;
   }
 }
 
@@ -3900,17 +4075,145 @@ Error
   .box-s-1 {
     flex: 0 0 auto;
     width: 100%;
+    padding: 5px;
   }
   .box-s-2 {
     flex: 0 0 auto;
     width: 50%;
+    padding: 5px;
   }
   .box-s-3 {
     flex: 0 0 auto;
     width: 33.333333333334%;
+    padding: 5px;
   }
 }
 
+
+
+@media (min-width: 1025px) {
+  .listing-desc .judul {
+    font-size: 22px;
+  }
+  .listing-desc .harga {
+    font-size: 27px;
+  }
+  .listing-desc .fasilitas {
+    font-size: 17px;
+  }
+  .listing-desc .detail-propbar {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 860px) {
+  .listing-desc .judul {
+    font-size: 20px;
+  }
+  .listing-desc .harga {
+    font-size: 25px;
+  }
+  .listing-desc .fasilitas {
+    font-size: 15px;
+  }
+  .listing-desc .detail-propbar {
+    font-size: 15px;
+  }
+}
+
+
+@media (max-width: 859px) and (min-width: 426px) {
+  .listing-desc .judul {
+    font-size: 18px;
+  }
+  .listing-desc .harga {
+    font-size: 23px;
+  }
+  .listing-desc .fasilitas {
+    font-size: 13px;
+  }
+  .listing-desc .detail-propbar {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 425px) {
+  .listing-desc .judul {
+    font-size: 12px;
+  }
+  .listing-desc .harga {
+    font-size: 15px;
+  }
+  .listing-desc .fasilitas {
+    font-size: 11px;
+  }
+  .listing-desc .detail-propbar {
+    font-size: 11px;
+  }
+}
+
+.listing-box {
+  width: 100%;
+  /* min-height: 200px; */
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 40px 0;
+  border-radius: 5px;
+  background: #232323;
+  transition: all 0.5s;
+  text-align: center;
+}
+
+.listing-box:hover {
+  color: white;
+  transform: translateY(-10px);
+  transition: 0.5s;
+}
+
+/* .listing-box p {
+  margin: 15px 10px 0px 10px;
+} */
+
+.listing-box h3 {
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.listing-box .listing-img {
+  height: 60%;
+}
+
+.listing-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  overflow: hidden;
+  background: white;
+}
+
+.listing-desc {
+  padding: 5px;
+  height: 40%;
+}
+.listing-desc div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listing-desc .judul {
+  height: 33%;
+}
+.listing-desc .harga {
+  height: 33%;
+}
+.listing-desc .fasilitas {
+  height: 33%;
+}
+.listing-desc .detail-propbar {
+  height: 70%;
+}
 
 
 /* -----------------------------------
@@ -3927,6 +4230,9 @@ Other
 
 .margintop-1cm {
   margin-top: 1cm;
+}
+.marginbottom-1cm {
+  margin-bottom: 1cm;
 }
 
 .padding-center {

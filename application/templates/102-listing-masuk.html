@@ -1,0 +1,166 @@
+{% extends 'index.html' %}
+{% set active_page = ' detail listing input' %}
+{% block body %}
+
+<main id="main">
+    <section id="create-listing">
+        <div class="container">
+            <div class="row margintop-1cm">
+                <div class="input-form">
+                    <h4>Marketing</h4>
+                    <div class="white-line">
+                        <div class="separator-line"> </div>
+                    </div>
+
+                    <div class="properti-input">
+                        <div class="input-tf box-xl-1 box-l-1 box-m-1 box-s-1">
+                            <div class="display-dt">
+                                <p class="dt-title">Nama Marketing</p>
+                                <div class="text-field">
+                                    <p class="dt-det-listing"> {{data.nama_marketing}} </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row margintop-1cm marginbottom-1cm">
+                <div class="input-form">
+                    <h4>Properti</h4>
+                    <div class="white-line">
+                        <div class="separator-line"> </div>
+                    </div>
+
+                    <div class="properti-input">
+                        <div class="input-tf box-xl-2 box-l-2 box-m-2 box-s-1">
+                            <div class="display-dt">
+                                <p class="dt-title">Properti yang dipasarkan</p>
+                                <div class="text-field">
+                                    <p class="dt-det-listing"> {{data.jual_sewa}} </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-tf box-xl-2 box-l-2 box-m-2 box-s-1">
+                            <div class="display-dt">
+                                <p class="dt-title">Tipe Properti yang dipasarkan</p>
+                                <div class="text-field">
+                                    <p class="dt-det-listing"> {{data.tipe_properti}} </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-tf box-xl-2 box-l-2 box-m-2 box-s-1">
+                            <div class="display-dt">
+                                <p class="dt-title">Luas Tanah</p>
+                                <div class="text-field">
+                                    <p class="dt-det-listing"> {{data.luas_tanah}} </p>
+                                    <p>m<sup>2</sup></p> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-tf box-xl-2 box-l-2 box-m-2 box-s-1">
+                            <div class="display-dt">
+                                <p class="dt-title">Luas Bangunan</p>
+                                <div class="text-field">
+                                    <p class="dt-det-listing"> {{data.luas_bangunan}} </p>
+                                    <p>m<sup>2</sup></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-tf box-xl-2 box-l-2 box-m-2 box-s-1">
+                            <div class="display-dt">
+                                <p class="dt-title">Jumlah Kamar Tidur</p>
+                                <div class="text-field">
+                                    <p class="dt-det-listing"> {{data.jmlh_kmr_tidur}} </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-tf box-xl-2 box-l-2 box-m-2 box-s-1">
+                            <div class="display-dt">
+                                <p class="dt-title">Jumlah Kamar Mandi</p>
+                                <div class="text-field">
+                                    <p class="dt-det-listing"> {{data.jmlh_kmr_mandi}} </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-tf box-xl-1 box-l-1 box-m-1 box-s-1">
+                            <div class="display-dt">
+                                <p class="dt-title">Alamat Properti</p>
+                                <div class="text-field">
+                                    <p class="dt-det-listing"> {{data.alamat_properti}} </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-tf box-xl-1 box-l-1 box-m-1 box-s-1">
+                            <div class="display-dt">
+                                <p class="dt-title">Sertifikat</p>
+                                <div class="text-field">
+                                    <p class="dt-det-listing"> {{data.sertifikat}} </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-tf box-xl-2 box-l-2 box-m-2 box-s-1">
+                            <div class="display-dt">
+                                <p class="dt-title">Jumlah Lantai</p>
+                                <div class="text-field">
+                                    <p class="dt-det-listing"> {{data.jmlh_lantai}} </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-tf box-xl-2 box-l-2 box-m-2 box-s-1">
+                            <div class="display-dt">
+                                <p class="dt-title">Hadap</p>
+                                <div class="text-field">
+                                    <p class="dt-det-listing"> {{data.hadap}} </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-tf box-xl-1 box-l-1 box-m-1 box-s-1">
+                            <div class="display-dt">
+                                <p class="dt-title">Fasilitas Lainnya</p>
+                                <div class="text-field">
+                                    <p class="dt-det-listing"> {{data.fasilitas_lainnya}} </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-tf box-xl-1 box-l-1 box-m-1 box-s-1">
+                            <div class="display-dt">
+                                <p class="dt-title">Judul Iklan</p>
+                                <div class="text-field">
+                                    <p class="dt-det-listing"> {{data.judul_iklan}} </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-tf box-xl-1 box-l-1 box-m-1 box-s-1">
+                            <div class="display-dt">
+                                <p class="dt-title">Deskripsi</p>
+                                <div class="text-field">
+                                    <p class="dt-det-listing"> {{data.deskripsi}} </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-tf box-xl-3 box-l-3 box-m-3 box-s-1">
+                            <div class="display-dt">
+                                <p class="dt-title">Harga Jual Properti</p>
+                                <div class="text-field">
+                                    <p>Rp</p>
+                                    <p class="dt-det-listing"> {{data.harga_jual}} </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="{{ url_for('terima', id_listing=data.id_listing)}}" class="button terima">Terima</a>
+            <a href="{{ url_for('mintaPerbaikan', id_listing=data.id_listing)}}" class="button minta-perbaikan">Minta Perbaikan</a>
+            <a href="{{ url_for('tolak', id_listing=data.id_listing)}}" class="button tolak">Tolak</a>
+
+            <!-- <button type="submit" class="button terima">Terima</button>
+            <button type="submit" class="button minta-perbaikan">Minta Perbaikan</button>
+            <button type="submit" class="button tolak">Tolak</button> -->
+            <div class="marginbottom-1cm"></div>
+        </div>
+    </section>
+</main>
+
+{% endblock %}

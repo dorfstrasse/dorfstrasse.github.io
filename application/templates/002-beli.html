@@ -28,75 +28,41 @@
               <button class="filter-btn" type="submit">Filter</button>
             </div>
 
-            <div class="filter-open">
-              <div class="box-xl-4 box-l-2 box-m-2 box-s-1 padding-10px">
-                <div class="dropdown-search">
-                  <div class="select">
-                    <span class="selected">Tipe Properti</span>
-                    <div class="caret"></div>
-                  </div>
-                  <ul class="menu-dropdown">
-                    <li>Rumah</li>
-                    <li>Ruko</li>
-                    <li>Apartemen</li>
-                    <li>Gudang-Pabrik</li>
-                    <li>Tanah-Kavling</li>
-                    <li>Apartemen</li>
-                    <li>Office-Space</li>
-                  </ul>
+            <div class="filter-search">
+              <div class="box-xl-2 box-l-2 box-m-2 box-s-1 padding-10px">
+                <div class="dropdown">
+                  <select id="tipe_properti" name="tipe_properti">
+                    <option value="" selected disabled>Silakan Pilih</option>
+                    <option value="Rumah">Rumah</option>
+                    <option value="Ruko">Ruko</option>
+                    <option value="Apartemen">Apartemen</option>
+                    <option value="Gudang">Gudang/Pabrik</option>
+                    <option value="Tanah">Tanah/Kavling</option>
+                    <option value="Office-Space">Ruang Usaha</option>
+                    <option value="Office-Space">Lainnya</option>
+                  </select>
+                </div>
+              </div>
+              <div class="box-xl-2 box-l-2 box-m-2 box-s-1 padding-10px">
+                <div class="dropdown">
+                  <select id="sertifikat" name="sertifikat">
+                    <option value="" selected disabled>Sertifikat</option>
+                    <option value="SHM (Surat Hak Milik)">SHM (Surat Hak Milik)</option>
+                    <option value="HGB (Hak Guna Bangunan)">HGB (Hak Guna Bangunan)</option>
+                    <option value="HS (Hak Sewa)">HS (Hak Sewa)</option>
+                    <option value="HPL">HPL</option>
+                    <option value="SHMSRS">SHMSRS</option>
+                    <option value="Hak">Hak Guna Usaha</option>
+                    <option value="HGB">HGB diatas HPL</option>
+                    <option value="Tanah">Tanah Adat</option>
+                    <option value="PPJB">PPJB</option>
+                    <option value="Girik">Girik</option>
+                    <option value="Ajb">Ajb</option>
+                </select>
                 </div>
               </div>
               <div class="box-xl-4 box-l-2 box-m-2 box-s-1 padding-10px">
-                <div class="dropdown-search">
-                  <div class="select">
-                    <span class="selected">Kondisi</span>
-                    <div class="caret"></div>
-                  </div>
-                  <ul class="menu-dropdown">
-                    <li>Baru</li>
-                    <li>Bagus Sekali</li>
-                    <li>Bagus</li>
-                    <li>Butuh Direnovasi</li>
-                    <li>Baru Direnovasi</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="box-xl-4 box-l-2 box-m-2 box-s-1 padding-10px">
-                <div class="dropdown-search">
-                  <div class="select">
-                    <span class="selected">Furnish</span>
-                    <div class="caret"></div>
-                  </div>
-                  <ul class="menu-dropdown">
-                    <li>Furnish</li>
-                    <li>Semi-Furnish</li>
-                    <li>Unfurnish</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="box-xl-4 box-l-2 box-m-2 box-s-1 padding-10px">
-                <div class="dropdown-search">
-                  <div class="select">
-                    <span class="selected">Sertifikat</span>
-                    <div class="caret"></div>
-                  </div>
-                  <ul class="menu-dropdown">
-                    <li>SHM (Surat Hak Milik)</li>
-                    <li>HGB (Hak Guna Bangunan)</li>
-                    <li>HS (Hak Sewa)</li>
-                    <li>HPL</li>
-                    <li>SHMSRS</li>
-                    <li>Hak Guna Usaha</li>
-                    <li>HGB diatas HPL</li>
-                    <li>Tanah Adat</li>
-                    <li>PPJB</li>
-                    <li>Girik</li>
-                    <li>Ajb</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="box-xl-4 box-l-2 box-m-2 box-s-1 padding-10px">
-                <div class="input-numerik">
+                <div class="listing-textfield">
                   <form action="" class="text-field">
                     <p>Rp</p>
                     <input type="text" onkeypress="return onlyNumberKey(event)" placeholder="Harga Min.">
@@ -104,7 +70,7 @@
                 </div>
               </div>
               <div class="box-xl-4 box-l-2 box-m-2 box-s-1 padding-10px">
-                <div class="input-numerik">
+                <div class="listing-textfield">
                   <form action="" class="text-field">
                     <p>Rp</p>
                     <input type="text" onkeypress="return onlyNumberKey(event)" placeholder="Harga Maks.">
@@ -112,7 +78,7 @@
                 </div>
               </div>
               <div class="box-xl-4 box-l-2 box-m-2 box-s-1 padding-10px">
-                <div class="input-numerik">
+                <div class="listing-textfield">
                   <form action="" class="text-field">
                     <input type="text" onkeypress="return onlyNumberKey(event)" placeholder="Luas Min.">
                     <p>m<sup>2</sup></p>
@@ -120,7 +86,7 @@
                 </div>
               </div>
               <div class="box-xl-4 box-l-2 box-m-2 box-s-1 padding-10px">
-                <div class="input-numerik">
+                <div class="listing-textfield">
                   <form action="" class="text-field">
                     <input type="text" onkeypress="return onlyNumberKey(event)" placeholder="Luas Maks.">
                     <p>m<sup>2</sup></p>
@@ -140,15 +106,16 @@
     <div class="container">
       
       <div class="row margintop-1cm">
-        
         <div class="box-xl-3 box-l-3 box-m-2 box-s-2 d-flex align-items-stretch" data-aos="fade-up">
           <a class="listing-box" href="{{ url_for('beli_detail_listing')}}">
             <div class="listing-img">
               <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
             </div>
-            <p class="judul">Judul</p>
-            <h3 class="harga">Rp00.000.000.000</h3>
-            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+            <div class="listing-desc">
+              <div class="judul">Judul</div>
+              <div class="harga">Rp00.000.000.000</div>
+              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
+            </div>
           </a>
         </div>
         
@@ -157,9 +124,11 @@
             <div class="listing-img">
               <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
             </div>
-            <p class="judul">Judul</p>
-            <h3 class="harga">Rp00.000.000.000</h3>
-            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+            <div class="listing-desc">
+              <div class="judul">Judul</div>
+              <div class="harga">Rp00.000.000.000</div>
+              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
+            </div>
           </a>
         </div>
         
@@ -168,9 +137,11 @@
             <div class="listing-img">
               <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
             </div>
-            <p class="judul">Judul</p>
-            <h3 class="harga">Rp00.000.000.000</h3>
-            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+            <div class="listing-desc">
+              <div class="judul">Judul</div>
+              <div class="harga">Rp00.000.000.000</div>
+              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
+            </div>
           </a>
         </div>
         
@@ -179,9 +150,11 @@
             <div class="listing-img">
               <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
             </div>
-            <p class="judul">Judul</p>
-            <h3 class="harga">Rp00.000.000.000</h3>
-            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+            <div class="listing-desc">
+              <div class="judul">Judul</div>
+              <div class="harga">Rp00.000.000.000</div>
+              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
+            </div>
           </a>
         </div>
         
@@ -190,9 +163,11 @@
             <div class="listing-img">
               <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
             </div>
-            <p class="judul">Judul</p>
-            <h3 class="harga">Rp00.000.000.000</h3>
-            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+            <div class="listing-desc">
+              <div class="judul">Judul</div>
+              <div class="harga">Rp00.000.000.000</div>
+              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
+            </div>
           </a>
         </div>
         
@@ -201,9 +176,11 @@
             <div class="listing-img">
               <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
             </div>
-            <p class="judul">Judul</p>
-            <h3 class="harga">Rp00.000.000.000</h3>
-            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+            <div class="listing-desc">
+              <div class="judul">Judul</div>
+              <div class="harga">Rp00.000.000.000</div>
+              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
+            </div>
           </a>
         </div>
         
@@ -212,9 +189,11 @@
             <div class="listing-img">
               <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
             </div>
-            <p class="judul">Judul</p>
-            <h3 class="harga">Rp00.000.000.000</h3>
-            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+            <div class="listing-desc">
+              <div class="judul">Judul</div>
+              <div class="harga">Rp00.000.000.000</div>
+              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
+            </div>
           </a>
         </div>
         
@@ -223,9 +202,11 @@
             <div class="listing-img">
               <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
             </div>
-            <p class="judul">Judul</p>
-            <h3 class="harga">Rp00.000.000.000</h3>
-            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+            <div class="listing-desc">
+              <div class="judul">Judul</div>
+              <div class="harga">Rp00.000.000.000</div>
+              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
+            </div>
           </a>
         </div>
         
@@ -234,12 +215,52 @@
             <div class="listing-img">
               <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
             </div>
-            <p class="judul">Judul</p>
-            <h3 class="harga">Rp00.000.000.000</h3>
-            <p class="fasilitas">Fasilitas | Fasilitas | Fasilitas</p>
+            <div class="listing-desc">
+              <div class="judul">Judul</div>
+              <div class="harga">Rp00.000.000.000</div>
+              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
+            </div>
           </a>
         </div>
         
+        <div class="box-xl-3 box-l-3 box-m-2 box-s-2 d-flex align-items-stretch" data-aos="fade-up">
+          <a class="listing-box" href="{{ url_for('beli_detail_listing')}}">
+            <div class="listing-img">
+              <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
+            </div>
+            <div class="listing-desc">
+              <div class="judul">Judul</div>
+              <div class="harga">Rp00.000.000.000</div>
+              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="box-xl-3 box-l-3 box-m-2 box-s-2 d-flex align-items-stretch" data-aos="fade-up">
+          <a class="listing-box" href="{{ url_for('beli_detail_listing')}}">
+            <div class="listing-img">
+              <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
+            </div>
+            <div class="listing-desc">
+              <div class="judul">Judul</div>
+              <div class="harga">Rp00.000.000.000</div>
+              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="box-xl-3 box-l-3 box-m-2 box-s-2 d-flex align-items-stretch" data-aos="fade-up">
+          <a class="listing-box" href="{{ url_for('beli_detail_listing')}}">
+            <div class="listing-img">
+              <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
+            </div>
+            <div class="listing-desc">
+              <div class="judul">Judul</div>
+              <div class="harga">Rp00.000.000.000</div>
+              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
+            </div>
+          </a>
+        </div>
       </div>
 
       <nav aria-label="page-navigation">

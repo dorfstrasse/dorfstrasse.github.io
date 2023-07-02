@@ -109,11 +109,16 @@ function removeCaretRotate() {
 //==================================================================================
 function onlyNumberKey(evt) {
               
-  // Only ASCII character in that range allowed
-  var ASCIICode = (evt.which) ? evt.which : evt.keyCode
-  if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
-      return false;
-  return true;
+  var key = evt.keyCode || evt.which;
+  var char = String.fromCharCode(key);
+  var allowedCharacters = /^[0-9+\-&]+$/;
+  if (!allowedCharacters.test(char)) {
+      evt.preventDefault();
+  }
+}
+function formatHarga(input) {
+  Number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  input.value = formattedAngka;
 }
 //==================================================================================
 const filters = document.querySelectorAll('.search-set');
@@ -212,7 +217,8 @@ const pageTitleMap = {
   'agen-kami-harapan-indah': 'Agen Harapan Indah Bekasi',
   'tentang-kami': 'Tentang Kami',
   'join-us': 'Join Us',
-  'buat-listing': 'Buat Listing'
+  'buat-listing': 'Buat Listing',
+  'konfirm-listing': 'Konfirm Listing'
 };
 
 // Mengubah judul website sesuai dengan halaman aktif
@@ -234,8 +240,7 @@ if (activePage !== "") {
 //   var titleElement = document.querySelector('.left-title h2');
 //   var propertyTitle = titleElement.textContent;
 //   document.title = propertyTitle;
-}
-;
+};
 
 
 //==================================================================================
