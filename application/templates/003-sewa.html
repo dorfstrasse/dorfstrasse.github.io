@@ -106,161 +106,20 @@
 
       <div class="row margintop-1cm">
         
+        {% for dt in data %}
         <div class="box-xl-3 box-l-3 box-m-2 box-s-2 d-flex align-items-stretch" data-aos="fade-up">
           <a class="listing-box" href="{{ url_for('beli_detail_listing')}}">
             <div class="listing-img">
               <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
             </div>
             <div class="listing-desc">
-              <div class="judul">Judul</div>
-              <div class="harga">Rp00.000.000.000</div>
-              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
+              <div class="judul">{{dt.judul_iklan}}</div>
+              <div class="harga">{{dt.harga_jual}}</div>
+              <div class="fasilitas">{{dt.tipe_properti}}</div>
             </div>
           </a>
         </div>
-        
-        <div class="box-xl-3 box-l-3 box-m-2 box-s-2 d-flex align-items-stretch" data-aos="fade-up">
-          <a class="listing-box" href="{{ url_for('beli_detail_listing')}}">
-            <div class="listing-img">
-              <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
-            </div>
-            <div class="listing-desc">
-              <div class="judul">Judul</div>
-              <div class="harga">Rp00.000.000.000</div>
-              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
-            </div>
-          </a>
-        </div>
-        
-        <div class="box-xl-3 box-l-3 box-m-2 box-s-2 d-flex align-items-stretch" data-aos="fade-up">
-          <a class="listing-box" href="{{ url_for('beli_detail_listing')}}">
-            <div class="listing-img">
-              <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
-            </div>
-            <div class="listing-desc">
-              <div class="judul">Judul</div>
-              <div class="harga">Rp00.000.000.000</div>
-              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
-            </div>
-          </a>
-        </div>
-        
-        <div class="box-xl-3 box-l-3 box-m-2 box-s-2 d-flex align-items-stretch" data-aos="fade-up">
-          <a class="listing-box" href="{{ url_for('beli_detail_listing')}}">
-            <div class="listing-img">
-              <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
-            </div>
-            <div class="listing-desc">
-              <div class="judul">Judul</div>
-              <div class="harga">Rp00.000.000.000</div>
-              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
-            </div>
-          </a>
-        </div>
-        
-        <div class="box-xl-3 box-l-3 box-m-2 box-s-2 d-flex align-items-stretch" data-aos="fade-up">
-          <a class="listing-box" href="{{ url_for('beli_detail_listing')}}">
-            <div class="listing-img">
-              <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
-            </div>
-            <div class="listing-desc">
-              <div class="judul">Judul</div>
-              <div class="harga">Rp00.000.000.000</div>
-              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
-            </div>
-          </a>
-        </div>
-        
-        <div class="box-xl-3 box-l-3 box-m-2 box-s-2 d-flex align-items-stretch" data-aos="fade-up">
-          <a class="listing-box" href="{{ url_for('beli_detail_listing')}}">
-            <div class="listing-img">
-              <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
-            </div>
-            <div class="listing-desc">
-              <div class="judul">Judul</div>
-              <div class="harga">Rp00.000.000.000</div>
-              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
-            </div>
-          </a>
-        </div>
-        
-        <div class="box-xl-3 box-l-3 box-m-2 box-s-2 d-flex align-items-stretch" data-aos="fade-up">
-          <a class="listing-box" href="{{ url_for('beli_detail_listing')}}">
-            <div class="listing-img">
-              <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
-            </div>
-            <div class="listing-desc">
-              <div class="judul">Judul</div>
-              <div class="harga">Rp00.000.000.000</div>
-              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
-            </div>
-          </a>
-        </div>
-        
-        <div class="box-xl-3 box-l-3 box-m-2 box-s-2 d-flex align-items-stretch" data-aos="fade-up">
-          <a class="listing-box" href="{{ url_for('beli_detail_listing')}}">
-            <div class="listing-img">
-              <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
-            </div>
-            <div class="listing-desc">
-              <div class="judul">Judul</div>
-              <div class="harga">Rp00.000.000.000</div>
-              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
-            </div>
-          </a>
-        </div>
-        
-        <div class="box-xl-3 box-l-3 box-m-2 box-s-2 d-flex align-items-stretch" data-aos="fade-up">
-          <a class="listing-box" href="{{ url_for('beli_detail_listing')}}">
-            <div class="listing-img">
-              <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
-            </div>
-            <div class="listing-desc">
-              <div class="judul">Judul</div>
-              <div class="harga">Rp00.000.000.000</div>
-              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
-            </div>
-          </a>
-        </div>
-        
-        <div class="box-xl-3 box-l-3 box-m-2 box-s-2 d-flex align-items-stretch" data-aos="fade-up">
-          <a class="listing-box" href="{{ url_for('beli_detail_listing')}}">
-            <div class="listing-img">
-              <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
-            </div>
-            <div class="listing-desc">
-              <div class="judul">Judul</div>
-              <div class="harga">Rp00.000.000.000</div>
-              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
-            </div>
-          </a>
-        </div>
-        
-        <div class="box-xl-3 box-l-3 box-m-2 box-s-2 d-flex align-items-stretch" data-aos="fade-up">
-          <a class="listing-box" href="{{ url_for('beli_detail_listing')}}">
-            <div class="listing-img">
-              <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
-            </div>
-            <div class="listing-desc">
-              <div class="judul">Judul</div>
-              <div class="harga">Rp00.000.000.000</div>
-              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
-            </div>
-          </a>
-        </div>
-        
-        <div class="box-xl-3 box-l-3 box-m-2 box-s-2 d-flex align-items-stretch" data-aos="fade-up">
-          <a class="listing-box" href="{{ url_for('beli_detail_listing')}}">
-            <div class="listing-img">
-              <img src="../static/img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg" class="properti" alt="">
-            </div>
-            <div class="listing-desc">
-              <div class="judul">Judul</div>
-              <div class="harga">Rp00.000.000.000</div>
-              <div class="fasilitas">Fasilitas | Fasilitas | Fasilitas</div>
-            </div>
-          </a>
-        </div>
+        {% endfor %}
         
       </div>
       

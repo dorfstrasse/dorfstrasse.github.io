@@ -30,12 +30,12 @@ def home():
 @app.route('/beli', methods=['GET','POST'])
 # @cek_login
 def beli():
-    # list_listing = view_listing.new_listing()
-    # listing = []
-    # for pl in list_listing:
-    #     listing.append(pl)
-    # return render_template('002-beli.html', data=listing)
-    return render_template('002-beli.html')
+    list_listing = view_listing.new_listing()
+    listing = []
+    for pl in list_listing:
+        listing.append(pl)
+    return render_template('002-beli.html', data=listing)
+    # return render_template('002-beli.html')
 
 @app.route('/beli/detail-listing', methods=['GET','POST'])
 def beli_detail_listing():
@@ -48,7 +48,12 @@ def beli_detail_listing():
 @app.route('/sewa', methods=['GET','POST'])
 # @cek_login
 def sewa():
-    return render_template('003-sewa.html')
+    list_listing = view_listing.new_listing()
+    listing = []
+    for pl in list_listing:
+        listing.append(pl)
+    return render_template('003-sewa.html', data=listing)
+    # return render_template('003-sewa.html')
 
 @app.route('/sewa/detail-listing', methods=['GET','POST'])
 def sewa_detail_listing():
