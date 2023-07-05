@@ -1,33 +1,3 @@
-// const dropdowns = document.querySelectorAll('.dropdown-search');
-
-// dropdowns.forEach(dropdown => {
-//   const select = dropdown.querySelector('.select');
-//   const caret = dropdown.querySelector('.caret');
-//   const menu = dropdown.querySelector('.menu-dropdown');
-//   const options = dropdown.querySelectorAll('.menu-dropdown li');
-//   const selected = dropdown.querySelector('.selected');
-
-//   select.addEventListener('click', () => {
-//     select.classList.toggle('select-clicked');
-//     caret.classList.toggle('caret-rotate');
-//     menu.classList.toggle('menu-open');
-//   });
-
-//   options.forEach(option => {
-//     option.addEventListener('click', () => {
-//       selected.innerText = option.innerText;
-//       select.classList.remove('select-clicked');
-//       caret.classList.remove('caret-rotate');
-//       menu.classList.remove('menu-open');
-
-//       option.forEach(option => {
-//         option.classList.remove('dropdown-active');
-//       });
-//       option.classList.add('dropdown-active');
-//     });
-//   });
-// });
-
 const dropdowns = document.querySelectorAll('.dropdown-search');
 
 dropdowns.forEach(dropdown => {
@@ -107,6 +77,7 @@ function removeCaretRotate() {
 }
 
 //==================================================================================
+
 function onlyNumberKey(evt) {
               
   var key = evt.keyCode || evt.which;
@@ -120,7 +91,9 @@ function formatHarga(input) {
   Number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   input.value = formattedAngka;
 }
+
 //==================================================================================
+
 const filters = document.querySelectorAll('.search-set');
 const navbar = document.querySelector('.navbar');
 const ul_link = document.querySelector('.links');
@@ -165,7 +138,9 @@ filters.forEach(dropdown => {
 
 window.addEventListener('DOMContentLoaded', toggleNavbarClass);
 window.addEventListener('resize', toggleNavbarClass);
+
 //==================================================================================
+
 var swiper1 = new Swiper(".swiping", {
   slidesPerView: 1,
   spaceBetween: 30,
@@ -175,23 +150,13 @@ var swiper1 = new Swiper(".swiping", {
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".next",
+    prevEl: ".previous ",
   },
 });
 
-// var swiper2 = new Swiper(".stiper", {
-//   slidesPerView: 1,
-//   spaceBetween: 30,
-//   freeMode: true,
-// });
-
-// var swiper3 = new Swiper(".navbar-mobile", {
-//   slidesPerView: 'auto',
-//   spaceBetween: 0,
-//   freeMode: true,
-// });
 //==================================================================================
+
 const tabs = document.querySelectorAll('.tab-btn');
 const all_content = document.querySelectorAll('.detail-content');
 
@@ -204,7 +169,9 @@ tabs.forEach((tab, index) => {
     all_content[index].classList.add('active');
   });
 });
+
 //==================================================================================
+
 const activePage = window.location.pathname.split('/')[1];
 const navLinks = document.querySelectorAll('nav li a');
 const pageTitleMap = {
@@ -242,8 +209,8 @@ if (activePage !== "") {
 //   document.title = propertyTitle;
 };
 
-
 //==================================================================================
+
 document.addEventListener("DOMContentLoaded", () => {
   const rows = document.querySelectorAll("tr[data-href]");
   console.log(rows);
@@ -267,3 +234,32 @@ document.addEventListener("DOMContentLoaded", () => {
 //     window.location.href = link;
 //   });
 // }
+
+//==================================================================================
+
+// const slides = document.querySelectorAll("[data-slide]");
+// const buttons = document.querySelectorAll("[data-button]");
+
+// let currSlide = 0;
+// let maxSlide = slides.length - 1;
+
+// const updateCarousel = (number = 0) => {
+//   slides.forEach((slide, index) => {
+//     slide.style.transform = `translateX(${(index - number) * 100}%)`;
+//   });
+// };
+
+// buttons.forEach((button) => {
+//   button.addEventListener("click", () => {
+//     button.dataset.button == "next" ? ++currSlide : --currSlide;
+
+//     if (currSlide > maxSlide) {
+//       currSlide = 0;
+//     } else if (currSlide < 0) {
+//       currSlide = maxSlide;
+//     }
+//     updateCarousel(currSlide);
+//   });
+// });
+
+// updateCarousel();

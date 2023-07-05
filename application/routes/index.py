@@ -39,7 +39,13 @@ def beli():
 
 @app.route('/beli/detail-listing', methods=['GET','POST'])
 def beli_detail_listing():
-    return render_template('100-detail-listing.html')
+    listing_title = request.args.get('judul_iklan')
+    alamat_properti = request.args.get('alamat_properti')
+    display_listing = view_listing.new_listing()
+    selected_listing = next((d for d in display_listing if d['judul_iklan'] == listing_title and d['alamat_properti'] == alamat_properti), None)
+    if selected_listing:
+        return render_template('100-detail-listing.html', data = selected_listing)
+    return render_template('98-error-404.html')
 
 
 # -------------------------------------------
@@ -53,11 +59,16 @@ def sewa():
     for pl in list_listing:
         listing.append(pl)
     return render_template('003-sewa.html', data=listing)
-    # return render_template('003-sewa.html')
 
 @app.route('/sewa/detail-listing', methods=['GET','POST'])
 def sewa_detail_listing():
-    return render_template('100-detail-listing.html')
+    listing_title = request.args.get('judul_iklan')
+    alamat_properti = request.args.get('alamat_properti')
+    display_listing = view_listing.new_listing()
+    selected_listing = next((d for d in display_listing if d['judul_iklan'] == listing_title and d['alamat_properti'] == alamat_properti), None)
+    if selected_listing:
+        return render_template('100-detail-listing.html', data = selected_listing)
+    return render_template('98-error-404.html')
 
 
 # -------------------------------------------

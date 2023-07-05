@@ -1198,51 +1198,106 @@ h6,
 # Detail Listing
 --------------------------------------------------------------*/
 
-#beli-detail {
-  padding-bottom: 30px;
+@media (min-width: 1025px) {
+  #carousel .carousel-wrapper {
+    max-height: 55vh;
+  }
 }
 
-#detail-listing {
-  /* background-color: rgb(35, 35, 35); */
-  justify-content: space-between;
+@media (max-width: 1024px) and (min-width: 860px) {
+  #carousel .carousel-wrapper {
+    max-height: 50vh;
+  }
 }
 
-#detail-listing::before {
-  content: "";
+@media (max-width: 859px) and (min-width: 426px) {
+  #carousel .carousel-wrapper {
+    max-height: 50vh;
+  }
+}
+
+@media (max-width: 425px) {
+  #carousel .carousel-wrapper {
+    max-height: 50vh;
+  }
+}
+
+#carousel {
+}
+
+#carousel .carousel-wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  position: relative;
+}
+
+#carousel .slide {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
   position: absolute;
+  transition: transform 300ms ease-out;
+}
+
+#carousel .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-radius: inherit; */
+}
+
+#carousel .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#carousel .carousel-wrapper .cbtn {
+  background: rgba(200, 200, 200, 0.7);
+  color: rgb(35, 35, 35);
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 10px;
+}
+
+#carousel .carousel-wrapper .cbtn:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transition: 0.3s;
+}
+
+#carousel .previous {
+  top: 50%;
   left: 0;
-  top: 0;
+  position: absolute;
+  z-index: 1;
+}
+#carousel .next {
+  top: 50%;
   right: 0;
-  bottom: 0;
-  width: max-content;
+  position: absolute;
+  z-index: 1;
+}
+
+#carousel .bi {
+  font-size: 20px;
+  display: flex;
   height: max-content;
-  /* object-fit: cover;
-  object-position: center center; */
-  background: linear-gradient(to bottom, rgba(24, 24, 24, 1), rgba(24, 24, 24, 0.8)), url("../img/village.jpg") center top no-repeat;
+  width: max-content;
 }
 
 #detail-listing .swiper {
-  width: 80%;
-  height: 100%;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   box-shadow: 0px 30px 50px 10px rgba(0, 0, 0, 0.5);
 }
-
-/* #detail-listing::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 10%);
-  width: 50%;
-  height: 20%;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 1);
-  box-shadow: 0px 150px 50px 0px rgba(255, 255, 255, 0.5);
-  z-index: -1;
-} */
 
 #detail-listing .swiper-slide {
   text-align: center;
@@ -1251,12 +1306,13 @@ h6,
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 #detail-listing .swiper-slide img {
   display: block;
   width: auto;
-  height: 65vh;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -1265,72 +1321,51 @@ h6,
   color: white;
 }
 
-.left-pict, .right-pict {
-  max-height: 650px;
-}
-
-.rowz {
-  padding: 5px;
-}
-
-.rowz .right-pict {
+.d-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
 }
 
-.pict1 {
-  height: 650px;
-  padding: 5px;
-}
-.pict2, .pict3, .pict4, .pict5 {
-  height: 325px;
-  padding: 5px;
+.carousels {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.left-pict img {
-  height: 100%;
-  width: 100%;
-  max-width: 100%;
-  border-radius: 5px;
-  object-fit: cover;
-  object-position: center center;
-  overflow: hidden;
+.carousel .sub-img {
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.right-pict img {
-  max-height: 100%;
-  width: 100%;
-  border-radius: 5px;
-  object-fit: cover;
-  object-position: center center;
-  overflow: hidden;
+.sub-img img {
+  height: 20vh;
+}
+
+#beli-detail {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
 
 .title-dl {
-  background-color: #302F34;
-  padding: 20px;
+  width: 100%;
+  /* background-color: rgb(35, 35, 35); */
+  /* padding: 20px; */
   border-radius: 5px;
 }
 
-.title-detail {
-  display: flex;
-  flex-wrap: wrap;
+.judul-listing {
+  margin-bottom: 15px;
 }
-
-.left-title {
-  display: grid;
-  align-items: center;
-  max-width: 700px;
-  gap: 10px;
+.judul-listing h3 {
+  font-weight: 300;
+  margin: 0;
 }
-.left-title h2, .left-title p {
-  display: grid;
-  justify-content: start;
-  margin-bottom: 0;
+.harga-listing {
+  margin-bottom: 15px;
 }
-.left-title span{
-  font-weight: 200;
+.harga-listing h3 {
+  margin: 0;
 }
 .fasilitas-listing img {
   height: 20px;
@@ -1339,21 +1374,75 @@ h6,
   gap: 15px;
 }
 
-.right-title {
-  display: grid;
-  align-items: center;
+.contact-agent {
+  /* background-color: rgb(35, 35, 35); */
+  border: 1px solid rgba(200, 200, 200, 0.5);
+  padding: 20px;
+  border-radius: 5px;
 }
-.right-title h2, .right-title p {
-  display: grid;
-  justify-content: end;
-  margin-bottom: 0;
+
+.agent-info {
+  border: 1px solid rgba(200, 200, 200, 0.5);
+  border-radius: 5px;
 }
-.right-title h2 {
+
+.contact-agent p {
+  font-size: 20px;
+}
+
+.media {
+  gap: 10px;
+}
+.media img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.kontak-agen {
+  margin-top: 18px;
+  display: grid;
+}
+.kontak-agen p {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+}
+.marketing-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 7px;
+}
+.marketing-btn a {
+  border: 2px solid;
+  width: 100%;
+  padding: 7px;
+  display: flex;
+  justify-content: center;
+}
+.marketing-btn .wa-btn {
+  border-color: rgb(18, 140, 126);
   color: white;
+  transition: 0.3s;
+}
+.marketing-btn .wa-btn:hover {
+  background: rgb(18, 140, 126);
+  color: white;
+  transition: 0.3s;
+}
+.marketing-btn .em-btn {
+  border-color: rgb(234, 67, 53);
+  color: white;
+  transition: 0.3s;
+}
+.marketing-btn .em-btn:hover {
+  background: rgb(234, 67, 53);
+  color: white;
+  transition: 0.3s;
 }
 
 .description-detail {
-  background-color: #302F34;
+  /* background-color: rgb(35, 35, 35); */
   padding: 20px;
   border-radius: 5px;
   height: 80vh;
@@ -1404,6 +1493,9 @@ h6,
 .detail-deskripsi {
   padding-right: 10px;
 }
+.detail-deskripsi .text-1 {
+  width: 25vh;
+}
 .detail-deskripsi p {
   font-size: 15px;
   font-weight: 300;
@@ -1412,12 +1504,6 @@ h6,
 
 .judul-properti {
   gap: 20px;
-}
-.label-nego {
-  background: linear-gradient(to bottom, rgb(222, 26, 50), rgb(150, 9, 25));
-  box-shadow: 0px 0px 10px 2px rgba(222, 26, 50, 0.5);
-  padding: 5px 15px 5px 15px;
-  border-radius: 5px;
 }
 
 .content-box .detail-content {
@@ -1431,40 +1517,6 @@ h6,
 
 .content-box .detail-content.active {
   display: block;
-}
-
-.contact-agent {
-  background-color: #302F34;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-.contact-agent p {
-  font-size: 20px;
-}
-
-.media {
-  gap: 10px;
-}
-.media img {
-  width: 70px;
-  height: 70px;
-}
-.media p {
-  display: flex;
-  font-size: 20px;
-  align-items: center;
-  margin: 0;
-}
-
-.kontak-agen {
-  margin-top: 18px;
-  display: grid;
-}
-.kontak-agen a {
-  font-size: 15px;
-  font-weight: 300;
-  margin-bottom: 18px;
 }
 
 /*--------------------------------------------------------------
@@ -4027,6 +4079,13 @@ Error
     width: 16.666666666667%;
     padding: 7px;
   }
+
+
+  .box-xl-23 {
+    flex: 0 0 auto;
+    width: 66.666666666667%;
+    padding: 7px;
+  }
 }
 
 @media (max-width: 1024px) and (min-width: 860px) {
@@ -4048,6 +4107,13 @@ Error
   .box-l-4 {
     flex: 0 0 auto;
     width: 25%;
+    padding: 7px;
+  }
+
+
+  .box-l-23 {
+    flex: 0 0 auto;
+    width: 66.666666666667%;
     padding: 7px;
   }
 }
@@ -4093,7 +4159,7 @@ Error
 
 @media (min-width: 1025px) {
   .listing-desc .judul {
-    font-size: 22px;
+    font-size: 20px;
   }
   .listing-desc .harga {
     font-size: 27px;
@@ -4108,7 +4174,7 @@ Error
 
 @media (max-width: 1024px) and (min-width: 860px) {
   .listing-desc .judul {
-    font-size: 20px;
+    font-size: 18px;
   }
   .listing-desc .harga {
     font-size: 25px;
@@ -4124,7 +4190,7 @@ Error
 
 @media (max-width: 859px) and (min-width: 426px) {
   .listing-desc .judul {
-    font-size: 18px;
+    font-size: 16px;
   }
   .listing-desc .harga {
     font-size: 23px;

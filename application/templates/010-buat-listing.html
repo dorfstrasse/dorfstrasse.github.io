@@ -33,22 +33,22 @@
                             </tr>
                           </thead>
                           <tbody>
-                            {% for pl in data %}
-                            <tr data-href="{{ url_for('bl_listing_masuk', id_listing=pl.id_listing)}}">
+                            {% for dt in data %}
+                            <tr data-href="{{ url_for('bl_listing_masuk', id_listing=dt.id_listing)}}">
                                 <td class="text-center">
-                                  <p class="data-listing">{{pl.waktu}}</p>
+                                  <p class="data-listing">{{dt.waktu}}</p>
                                 </td>
                                 <td class="text-center">
-                                  <p class="data-listing">{{pl.jual_sewa}}</p>
+                                  <p class="data-listing">{{dt.jual_sewa}}</p>
                                 </td>
                                 <td class="text-center">
-                                  <p class="data-listing">{{pl.judul_iklan}}</p>
+                                  <p class="data-listing">{{dt.judul_iklan}}</p>
                                 </td>
                                 <td class="text-center">
-                                  <p class="data-listing">{{pl.tipe_properti}}</p>
+                                  <p class="data-listing">{{dt.tipe_properti}}</p>
                                 </td>
                                 <td class="text-center">
-                                  <p class="ket-data">{{pl.status}}</p>
+                                  <p class="ket-data">{{dt.status}}</p>
                                 </td>
                             </tr>
                             {% endfor %}
