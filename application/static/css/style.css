@@ -1274,13 +1274,13 @@ h6,
 
 #carousel .previous {
   top: 50%;
-  left: 0;
+  left: 10px;
   position: absolute;
   z-index: 1;
 }
 #carousel .next {
   top: 50%;
-  right: 0;
+  right: 10px;
   position: absolute;
   z-index: 1;
 }
@@ -1390,12 +1390,10 @@ h6,
   font-size: 20px;
 }
 
-.media {
-  gap: 10px;
-}
-.media img {
+.foto-marketing img {
   width: 100%;
   object-fit: cover;
+  border-radius: 5px 5px 0px 0px;
 }
 
 .kontak-agen {
@@ -1411,7 +1409,7 @@ h6,
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 7px;
+  padding: 10px;
 }
 .marketing-btn a {
   border: 2px solid;
@@ -1500,6 +1498,9 @@ h6,
   font-size: 15px;
   font-weight: 300;
   margin-bottom: 5px;
+}
+.detail-deskripsi .d-flex {
+  gap: 10px;
 }
 
 .judul-properti {
@@ -4220,7 +4221,7 @@ Error
 
 .listing-box {
   width: 100%;
-  /* min-height: 200px; */
+  max-height: 350px;
   position: relative;
   overflow: hidden;
   margin: 0 0 40px 0;

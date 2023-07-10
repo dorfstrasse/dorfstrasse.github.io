@@ -1,4 +1,5 @@
 import os
+import base64
 from werkzeug.utils import secure_filename
 from application import app
 from flask import Flask,render_template,redirect, request,url_for,session,flash
@@ -33,6 +34,8 @@ def beli():
     list_listing = view_listing.new_listing()
     listing = []
     for pl in list_listing:
+        print('\n\n\n')
+        pl['foto1'] = base64.b64encode(pl['foto1']).decode('utf-8')
         listing.append(pl)
     return render_template('002-beli.html', data=listing)
     # return render_template('002-beli.html')
