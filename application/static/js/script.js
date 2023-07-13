@@ -176,6 +176,7 @@ const activePage = window.location.pathname.split('/')[1];
 const navLinks = document.querySelectorAll('nav li a');
 const pageTitleMap = {
   '': 'Era Sky Bekasi',
+  'home': 'Era Sky Bekasi',
   'beli': 'Beli Properti',
   'sewa': 'Sewa Properti',
   'properti-baru': 'Properti Baru',

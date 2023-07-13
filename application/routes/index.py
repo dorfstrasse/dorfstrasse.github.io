@@ -19,7 +19,7 @@ view_listing = listing_display()
 # -------------------------------------------
 # HOME
 # -------------------------------------------
-@app.route('/home')
+@app.route('/')
 # @cek_login
 def home():
     return render_template('001-home.html')
