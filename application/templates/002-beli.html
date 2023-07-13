@@ -111,10 +111,11 @@
           <a class="listing-box" href="{{ url_for('beli_detail_listing', judul_iklan=dt.judul_iklan, alamat_properti=dt.alamat_properti)}}">
             <div class="listing-img">
               <!-- <img src="{{url_for('static', filename='img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg')}}" class="properti" alt=""> -->
-              <img src="data:image/jpeg;base64,{{ dt.foto1 }}" class="properti" alt="">
+              <!-- <img src="data:image/jpeg;base64,{{ dt.foto1 }}" class="properti" alt=""> -->
+              <img src="{{ url_for('static', filename='img/1_Rumah-Modern-dengan-Dinding-Batu-Alam_tiperumahminimalis.blogspot.com.jpg')}}" alt="">
             </div>
             <div class="listing-desc">
-              <div class="judul">{{dt.judul_iklan[:30]}}</div>
+              <div class="judul">{{dt.judul_iklan[0:25]}}</div>
               <div class="harga">{{dt.harga_jual}}</div>
               <div class="fasilitas">{{dt.tipe_properti}}</div>
             </div>

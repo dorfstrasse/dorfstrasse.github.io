@@ -10,7 +10,7 @@ class listing(object):
         try:
             cur = conn.cursor()
             query = '''
-					select * from pending_listing
+					SELECT * FROM pending_listing
 					'''
             cur.execute(query)
             data = self.rows_to_dict_list(cur)

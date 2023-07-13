@@ -10,7 +10,7 @@ class listing_display(object):
         try:
             cur = conn.cursor()
             query = '''
-					select * from new_listing0
+					SELECT * from fix_listing
 					'''
             cur.execute(query)
             data = self.rows_to_dict_list(cur)

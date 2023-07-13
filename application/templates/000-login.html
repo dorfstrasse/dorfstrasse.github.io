@@ -48,41 +48,60 @@
         </div>
     </header>
     <main class="login-content">
-        <section>
-            <div class="login-holder">
-                <div class="login-card">
-                    <form action="{{ url_for('login') }}" method="post" role="form">
-    
-                        <div class="marginbottom-1cm">
-                            <h2>Masuk</h2>
-                        </div>
-    
-                        <div class="input-masuk box-xl-1 box-l-1 box-m-1 box-s-1">
-                            <input id="emailLoginInput" name="email-login" class="esLoginInput" type="text" required>
-                            <label class="esLoginLabel" for="emailLoginInput">Email</label>
-                        </div>
-    
-                        <div class="input-masuk box-xl-1 box-l-1 box-m-1 box-s-1">
-                            <input id="passwordLoginInput" name="password-login" class="esLoginInput" type="password" required>
-                            <label class="esLoginLabel" for="passwordLoginInput">Password</label>
-                        </div>
-    
-                        <div class="btn-login box-xl-1 box-l-1 box-m-1 box-s-1">
-                            <button type="submit" class="button-login">Masuk</button>
-                        </div>
-
-
-                        <div class="ingat-saya box-xl-1 box-l-1 box-m-1 box-s-1">
-                            <div>
-                                <input id="checkbox" name="checkbox" class="check" type="checkbox">
-                                <label class="cb-des" for="checkbox">Ingat Saya</label>
+        <div class="login-wrapper">
+            <div class="container">
+                <div class="login-holder">
+                    <div class="login-card">
+                        <form action="{{ url_for('login') }}" method="post" role="form">
+        
+                            <div class="marginbottom-1cm">
+                                <h2>Masuk</h2>
                             </div>
-                            <a class="lupa-password" href="">Lupa Password?</a>
-                        </div>
-                    </form>
+        
+                            <div class="input-masuk box-xl-1 box-l-1 box-m-1 box-s-1">
+                                <input id="emailLoginInput" name="email-login" class="esLoginInput" type="text" required>
+                                <label class="esLoginLabel" for="emailLoginInput">Email</label>
+                            </div>
+        
+                            <div class="input-masuk box-xl-1 box-l-1 box-m-1 box-s-1">
+                                <input id="passwordLoginInput" name="password-login" class="esLoginInput" type="password" required>
+                                <label class="esLoginLabel" for="passwordLoginInput">Password</label>
+                            </div>
+        
+                            <div class="btn-login box-xl-1 box-l-1 box-m-1 box-s-1">
+                                <button type="submit" class="button-login">Masuk</button>
+                            </div>
+    
+    
+                            <div class="ingat-saya box-xl-1 box-l-1 box-m-1 box-s-1">
+                                <div>
+                                    <input id="checkbox" name="checkbox" class="check" type="checkbox">
+                                    <label class="cb-des" for="checkbox">Ingat Saya</label>
+                                </div>
+                                <a class="login-option" href="">Lupa Password?</a>
+    
+                            </div>
+    
+                            <div class="as-guest">
+                                <a class="login-option" href="{{ url_for('home') }}">Masuk sebagai tamu</a>
+                            </div>
+                            
+                            {{form.csrf_token}}
+                            {% if pesan %}
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <strong>{{ pesan }}</strong>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 </body>
 

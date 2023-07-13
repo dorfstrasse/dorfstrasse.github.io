@@ -19,7 +19,7 @@ view_listing = listing_display()
 # -------------------------------------------
 # HOME
 # -------------------------------------------
-@app.route('/')
+@app.route('/home')
 # @cek_login
 def home():
     return render_template('001-home.html')
@@ -34,8 +34,7 @@ def beli():
     list_listing = view_listing.new_listing()
     listing = []
     for pl in list_listing:
-        print('\n\n\n')
-        pl['foto1'] = base64.b64encode(pl['foto1']).decode('utf-8')
+        # pl['foto'] = base64.b64encode(pl['foto1']).decode('utf-8')
         listing.append(pl)
     return render_template('002-beli.html', data=listing)
     # return render_template('002-beli.html')
@@ -133,7 +132,8 @@ def buat_listing():
     pending_listing = pend_listing.pending_listing()
     list_pending = []
     for pl in pending_listing:
-        list_pending.append(pl)
+        if pl['nama_marketing'] == session['nama_account']:
+            list_pending.append(pl)
     return render_template('010-buat-listing.html', data=list_pending)
 
 @app.route('/buat-listing/input-listing', methods=['GET', 'POST'])

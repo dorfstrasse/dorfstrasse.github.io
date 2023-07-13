@@ -5,29 +5,55 @@
             <img src="{{ url_for('static', filename='img/era-sky-silver01.png') }}" alt="logo"/>
         </a>
 
-        <nav id="navbar" class="navbar navbar-mobile"> <!--  swiper navbar-mobile -->
-            <ul class="links"> <!--  swiper-wrapper -->
-                <li><a class="menu" href="{{ url_for('beli')}}">Jual</a></li>
-                <li><a class="menu" href="{{ url_for('sewa')}}">Sewa</a></li>
-                <li><a class="menu" href="{{ url_for('properti_baru')}}">Properti Baru</a></li>
-                <li><a class="menu" href="{{ url_for('berita')}}">Berita</a></li>
-                <div class="menu-line">
-                    <div class="separator-line"> </div>
-                </div>
-                <li class="dropdown"><a class="menu {{'active' if active_page == 'agen kami'}}">Agen Kami <i class="bi bi-chevron-down"></i></a>
-                    <ul>
-                        <li><a href="{{ url_for('agen_kami_sb')}}">Summarecon Bekasi</a></li>
-                        <li><a href="{{ url_for('agen_kami_hi')}}">Harapan Indah Bekasi</a></li>
-                    </ul>
-                </li>
-                <li><a class="menu" href="{{ url_for('tentang_kami')}}">Tentang Kami</a></li>
-                <li><a class="menu" href="{{ url_for('join_us')}}">Join Us</a></li>
-                <li><a class="menu" href="{{ url_for('buat_listing')}}">Buat Listing</a></li>
-                <li><a class="menu" href="{{ url_for('konfirm_listing')}}">Konfirm Listing</a></li>
-                
-            </ul>
-            <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
-        </nav>
+        {% if not session.get('login') %}
+            <nav id="navbar" class="navbar navbar-mobile"> <!--  swiper navbar-mobile -->
+                <ul class="links"> <!--  swiper-wrapper -->
+                    <li><a class="menu" href="{{ url_for('beli')}}">Jual</a></li>
+                    <li><a class="menu" href="{{ url_for('sewa')}}">Sewa</a></li>
+                    <li><a class="menu" href="{{ url_for('properti_baru')}}">Properti Baru</a></li>
+                    <li><a class="menu" href="{{ url_for('berita')}}">Berita</a></li>
+                    <div class="menu-line">
+                        <div class="separator-line"> </div>
+                    </div>
+                    <li class="dropdown"><a class="menu {{'active' if active_page == 'agen kami'}}">Agen Kami <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="{{ url_for('agen_kami_sb')}}">Summarecon Bekasi</a></li>
+                            <li><a href="{{ url_for('agen_kami_hi')}}">Harapan Indah Bekasi</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="menu" href="{{ url_for('tentang_kami')}}">Tentang Kami</a></li>
+                    <li><a class="menu" href="{{ url_for('join_us')}}">Join Us</a></li>
+                    <li><a class="menu button" href="{{ url_for('login')}}">Masuk</a></li>
+                </ul>
+                <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
+            </nav>
+        {% else %}
+            <nav id="navbar" class="navbar navbar-mobile"> <!--  swiper navbar-mobile -->
+                <ul class="links"> <!--  swiper-wrapper -->
+                    <li><a class="menu" href="{{ url_for('beli')}}">Jual</a></li>
+                    <li><a class="menu" href="{{ url_for('sewa')}}">Sewa</a></li>
+                    <li><a class="menu" href="{{ url_for('properti_baru')}}">Properti Baru</a></li>
+                    <li><a class="menu" href="{{ url_for('berita')}}">Berita</a></li>
+                    <div class="menu-line">
+                        <div class="separator-line"> </div>
+                    </div>
+                    <li class="dropdown"><a class="menu {{'active' if active_page == 'agen kami'}}">Agen Kami <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="{{ url_for('agen_kami_sb')}}">Summarecon Bekasi</a></li>
+                            <li><a href="{{ url_for('agen_kami_hi')}}">Harapan Indah Bekasi</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="menu" href="{{ url_for('tentang_kami')}}">Tentang Kami</a></li>
+                    <li><a class="menu" href="{{ url_for('join_us')}}">Join Us</a></li>
+                    <li><a class="menu" href="{{ url_for('buat_listing')}}">Buat Listing</a></li>
+                    <li><a class="menu" href="{{ url_for('konfirm_listing')}}">Konfirm Listing</a></li>
+                    <li><a class="menu button" href="{{ url_for('logout')}}">Keluar</a></li>
+                </ul>
+                <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
+            </nav>
+        {% endif %}
+        
+        <!-- Mobile Burger Button -->
         <button class="menu-btn">
             <div class="bar"></div>
         </button>

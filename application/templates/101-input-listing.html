@@ -14,11 +14,11 @@
                         </div>
 
                         <div class="properti-input">
-                            <div class="input-tf box-xl-1 box-l-1 box-m-1 box-s-1">
-                                <div class="display-dt">
-                                    <p class="dt-title">Nama Marketing</p>
-                                    <div class="text-field">
-                                        <input id="nama_marketing" name="nama_marketing" class="input-marketing" type="text" placeholder="Masukkan Nama Marketing">
+                            <div class="box-xl-1 box-l-1 box-m-1 box-s-1">
+                                <div class="input-wrapper">
+                                    <div class="input-holder">
+                                        <input id="nama_marketing" name="nama_marketing" class="textFieldInput" type="text" required>
+                                        <label class="textFieldLabel" for="nama_marketing">Nama Marketing</label>
                                     </div>
                                 </div>
                             </div>
@@ -35,139 +35,142 @@
                         </div>
     
                         <div class="properti-input">
-                            <div class="dropdown-listing box-xl-2 box-l-2 box-m-2 box-s-1">
-                                <div class="display-dt">
-                                    <p class="dt-title">Properti yang dipasarkan</p>
-                                    <select class="dd-input" id="jual_sewa" name="jual_sewa" class="">
-                                        <option value="" selected disabled>Silakan Pilih</option>
-                                        <option class="drop-list" value="Dijual">Dijual</option>
-                                        <option class="drop-list" value="Disewa">Disewa</option>
-                                        <option class="drop-list" value="Dijual dan Disewa">Dijual dan Disewa</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="dropdown-listing box-xl-2 box-l-2 box-m-2 box-s-1">
-                                <div class="display-dt">
-                                    <p class="dt-title">Tipe Properti yang dipasarkan</p>
-                                    <select class="dd-input" id="tipe_properti" name="tipe_properti">
-                                        <option value="" selected disabled>Silakan Pilih</option>
-                                        <option value="Rumah">Rumah</option>
-                                        <option value="Ruko">Ruko</option>
-                                        <option value="Apartemen">Apartemen</option>
-                                        <option value="Gudang">Gudang/Pabrik</option>
-                                        <option value="Tanah">Tanah/Kavling</option>
-                                        <option value="Office-Space">Ruang Usaha</option>
-                                        <option value="Office-Space">Lainnya</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="input-numerik box-xl-2 box-l-2 box-m-2 box-s-1">
-                                <div class="display-dt">
-                                    <p class="dt-title">Luas Tanah</p>
-                                    <div class="text-field">
-                                        <input id="luas_tanah" name="luas_tanah" class="input-marketing" type="text" onkeypress="return onlyNumberKey(event)" placeholder="Masukkan Luas Tanah">
-                                        <p>m<sup>2</sup></p>
+                            <div class="box-xl-2 box-l-2 box-m-2 box-s-1">
+                                <div class="input-wrapper">
+                                    <div class="input-holder">
+                                        <select class="dd-input" id="jual_sewa" name="jual_sewa">
+                                            <option value="" selected disabled>Silakan Pilih</option>
+                                            <option class="drop-list" value="Dijual">Dijual</option>
+                                            <option class="drop-list" value="Disewa">Disewa</option>
+                                            <option class="drop-list" value="Dijual dan Disewa">Dijual dan Disewa</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-numerik box-xl-2 box-l-2 box-m-2 box-s-1">
-                                <div class="display-dt">
-                                    <p class="dt-title">Luas Bangunan</p>
-                                    <div class="text-field">
-                                        <input id="luas_bangunan" name="luas_bangunan" class="input-marketing" type="text" onkeypress="return onlyNumberKey(event)" placeholder="Masukkan Luas Bangunan">
-                                        <p>m<sup>2</sup></p>
+                            <div class="box-xl-2 box-l-2 box-m-2 box-s-1">
+                                <div class="input-wrapper">
+                                    <div class="input-holder">
+                                        <select class="dd-input" id="tipe_properti" name="tipe_properti">
+                                            <option value="" selected disabled>Silakan Pilih</option>
+                                            <option value="Rumah">Rumah</option>
+                                            <option value="Ruko">Ruko</option>
+                                            <option value="Apartemen">Apartemen</option>
+                                            <option value="Gudang">Gudang/Pabrik</option>
+                                            <option value="Tanah">Tanah/Kavling</option>
+                                            <option value="Office-Space">Ruang Usaha</option>
+                                            <option value="Office-Space">Lainnya</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-numerik box-xl-2 box-l-2 box-m-2 box-s-1">
-                                <div class="display-dt">
-                                    <p class="dt-title">Jumlah Kamar Tidur</p>
-                                    <div class="text-field">
-                                        <input id="jmlh_kmr_tidur" name="jmlh_kmr_tidur" class="input-marketing" onkeypress="return onlyNumberKey(event)" class="input-marketing" type="text" placeholder="Masukkan Jumlah Kamar Tidur">
+                            <div class="box-xl-2 box-l-2 box-m-2 box-s-1">
+                                <div class="input-wrapper">
+                                    <div class="input-holder">
+                                        <input id="luas_tanah" name="luas_tanah" class="textFieldInput" type="text" onkeypress="return onlyNumberKey(event)" required>
+                                        <label class="textFieldLabel" for="luas_tanah">Luas Tanah</label>
+                                    </div>
+                                    <p>m<sup>2</sup></p>
+                                </div>
+                            </div>
+                            <div class="box-xl-2 box-l-2 box-m-2 box-s-1">
+                                <div class="input-wrapper">
+                                    <div class="input-holder">
+                                        <input id="luas_bangunan" name="luas_bangunan" class="textFieldInput" type="text" onkeypress="return onlyNumberKey(event)" required>
+                                        <label class="textFieldLabel" for="luas_bangunan">Luas Bangunan</label>
+                                    </div>
+                                    <p>m<sup>2</sup></p>
+                                </div>
+                            </div>
+                            <div class="box-xl-2 box-l-2 box-m-2 box-s-1">
+                                <div class="input-wrapper">
+                                    <div class="input-holder">
+                                        <input id="jmlh_kmr_tidur" name="jmlh_kmr_tidur" class="textFieldInput" onkeypress="return onlyNumberKey(event)" class="textFieldInput" type="text" required>
+                                        <label class="textFieldLabel" for="jmlh_kmr_tidur">Jumlah Kamar Tidur</label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-numerik box-xl-2 box-l-2 box-m-2 box-s-1">
-                                <div class="display-dt">
-                                    <p class="dt-title">Jumlah Kamar Mandi</p>
-                                    <div class="text-field">
-                                        <input id="jmlh_kmr_mandi" name="jmlh_kmr_mandi" class="input-marketing" onkeypress="return onlyNumberKey(event)" type="text" placeholder="Masukkan Jumlah Kamar Mandi">
+                            <div class="box-xl-2 box-l-2 box-m-2 box-s-1">
+                                <div class="input-wrapper">
+                                    <div class="input-holder">
+                                        <input id="jmlh_kmr_mandi" name="jmlh_kmr_mandi" class="textFieldInput" onkeypress="return onlyNumberKey(event)" type="text" required>
+                                        <label class="textFieldLabel" for="jmlh_kmr_mandi">Jumlah Kamar Mandi</label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-tf box-xl-1 box-l-1 box-m-1 box-s-1">
-                                <div class="display-dt">
-                                    <p class="dt-title">Alamat Properti</p>
-                                    <div class="text-field">
-                                        <input id="alamat_properti" name="alamat_properti" class="input-marketing" type="text" placeholder="Masukkan Alamat Properti">
+                            <div class="box-xl-1 box-l-1 box-m-1 box-s-1">
+                                <div class="input-wrapper">
+                                    <div class="input-holder">
+                                        <input id="alamat_properti" name="alamat_properti" class="textFieldInput" type="text" required>
+                                        <label class="textFieldLabel" for="alamat_properti">Alamat Properti</label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="dropdown-listing box-xl-1 box-l-1 box-m-1 box-s-1">
-                                <div class="display-dt">
-                                    <p class="dt-title">Sertifikat</p>
-                                    <select class="dd-input" id="sertifikat" name="sertifikat">
-                                        <option value="" selected disabled>Silakan Pilih</option>
-                                        <option value="SHM (Surat Hak Milik)">SHM (Surat Hak Milik)</option>
-                                        <option value="HGB (Hak Guna Bangunan)">HGB (Hak Guna Bangunan)</option>
-                                        <option value="HS (Hak Sewa)">HS (Hak Sewa)</option>
-                                        <option value="HPL">HPL</option>
-                                        <option value="SHMSRS">SHMSRS</option>
-                                        <option value="Hak">Hak Guna Usaha</option>
-                                        <option value="HGB">HGB diatas HPL</option>
-                                        <option value="Tanah">Tanah Adat</option>
-                                        <option value="PPJB">PPJB (Perjanjian Pengikatan Jual Beli)</option>
-                                        <option value="Girik">Girik</option>
-                                        <option value="Ajb">AJB</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="input-numerik box-xl-2 box-l-2 box-m-2 box-s-1">
-                                <div class="display-dt">
-                                    <p class="dt-title">Jumlah Lantai</p>
-                                    <div class="text-field">
-                                        <input id="jmlh_lantai" name="jmlh_lantai" class="input-marketing" onkeypress="return onlyNumberKey(event)" type="text" placeholder="Masukkan Jumlah Lantai">
+                            <div class="box-xl-1 box-l-1 box-m-1 box-s-1">
+                                <div class="input-wrapper">
+                                    <div class="input-holder">
+                                        <select class="dd-input" id="sertifikat" name="sertifikat">
+                                            <option value="" selected disabled>Silakan Pilih</option>
+                                            <option value="SHM (Surat Hak Milik)">SHM (Surat Hak Milik)</option>
+                                            <option value="HGB (Hak Guna Bangunan)">HGB (Hak Guna Bangunan)</option>
+                                            <option value="HS (Hak Sewa)">HS (Hak Sewa)</option>
+                                            <option value="HPL">HPL</option>
+                                            <option value="SHMSRS">SHMSRS</option>
+                                            <option value="Hak">Hak Guna Usaha</option>
+                                            <option value="HGB">HGB diatas HPL</option>
+                                            <option value="Tanah">Tanah Adat</option>
+                                            <option value="PPJB">PPJB (Perjanjian Pengikatan Jual Beli)</option>
+                                            <option value="Girik">Girik</option>
+                                            <option value="Ajb">AJB</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-tf box-xl-2 box-l-2 box-m-2 box-s-1">
-                                <div class="display-dt">
-                                    <p class="dt-title">Hadap</p>
-                                    <div class="text-field">
-                                        <input id="hadap" name="hadap" class="input-marketing" type="text" placeholder="Masukkan Kemana Properti Menghadap">
+                            <div class="box-xl-2 box-l-2 box-m-2 box-s-1">
+                                <div class="input-wrapper">
+                                    <div class="input-holder">
+                                        <input id="jmlh_lantai" name="jmlh_lantai" class="textFieldInput" onkeypress="return onlyNumberKey(event)" type="text" required>
+                                        <label class="textFieldLabel" for="jmlh_lantai">Jumlah Lantai</label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-tf box-xl-1 box-l-1 box-m-1 box-s-1">
-                                <div class="display-dt">
-                                    <p class="dt-title">Fasilitas Lainnya</p>
-                                    <div class="text-field">
-                                        <input id="fasilitas_lainnya" name="fasilitas_lainnya" class="input-marketing" type="text" placeholder="Masukkan Fasilitas Lainnya">
+                            <div class="box-xl-2 box-l-2 box-m-2 box-s-1">
+                                <div class="input-wrapper">
+                                    <div class="input-holder">
+                                        <input id="hadap" name="hadap" class="textFieldInput" type="text" required>
+                                        <label class="textFieldLabel" for="hadap">Hadap</label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-tf box-xl-1 box-l-1 box-m-1 box-s-1">
-                                <div class="display-dt">
-                                    <p class="dt-title">Judul Iklan</p>
-                                    <div class="text-field">
-                                        <input id="judul_iklan" name="judul_iklan" class="input-marketing" type="text" placeholder="Masukkan Judul Iklan">
+                            <div class="box-xl-1 box-l-1 box-m-1 box-s-1">
+                                <div class="input-wrapper">
+                                    <div class="input-holder">
+                                        <input id="fasilitas_lainnya" name="fasilitas_lainnya" class="textFieldInput" type="text" required>
+                                        <label class="textFieldLabel" for="fasilitas_lainnya">Fasilitas Lainnya</label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-tf box-xl-1 box-l-1 box-m-1 box-s-1">
-                                <div class="display-dt">
-                                    <p class="dt-title">Deskripsi</p>
-                                    <div class="text-field">
-                                        <input id="deskripsi" name="deskripsi" class="input-marketing" type="text" placeholder="Masukkan Deskripsi">
+                            <div class="box-xl-1 box-l-1 box-m-1 box-s-1">
+                                <div class="input-wrapper">
+                                    <div class="input-holder">
+                                        <input id="judul_iklan" name="judul_iklan" class="textFieldInput" type="text" required>
+                                        <label class="textFieldLabel" for="judul_iklan">Judul Iklan</label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="input-numerik box-xl-2 box-l-2 box-m-2 box-s-1">
-                                <div class="display-dt">
-                                    <p class="dt-title">Harga Jual Properti</p>
-                                    <div class="text-field">
-                                        <p>Rp</p>
-                                        <input id="harga_jual" name="harga_jual" class="input-marketing" type="text" onkeypress="return onlyNumberKey(event)" placeholder="Masukkan Harga Jual">
+                            <div class="box-xl-1 box-l-1 box-m-1 box-s-1">
+                                <div class="input-wrapper">
+                                    <div class="input-holder">
+                                        <input id="deskripsi" name="deskripsi" class="textFieldInput" type="text" required>
+                                        <label class="textFieldLabel" for="deskripsi">Deskripsi</label>
+                                    </div>
+                                </div>                                
+                            </div>
+                            <div class="box-xl-2 box-l-2 box-m-2 box-s-1">
+                                <div class="input-wrapper">
+                                    <p>Rp</p>
+                                    <div class="input-holder">
+                                        <input id="harga_jual" name="harga_jual" class="textFieldInput" type="text" onkeypress="return onlyNumberKey(event)" required>
+                                        <label class="textFieldLabel" for="harga_jual">Harga Jual</label>
                                     </div>
                                 </div>
                             </div>
