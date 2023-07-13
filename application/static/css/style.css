@@ -2288,6 +2288,11 @@ Page Item
   padding: 0px;
 }
 
+#create-listing .submit-form {
+  padding: 20px;
+  width: 100%;
+}
+
 .input-marketing {
   background: none;
   color: white;
@@ -2310,67 +2315,10 @@ Page Item
   min-height: 27px;
 }
 
-/* @media (min-width: 860px) {
-  #create-listing .dropdown-search {
-    flex: 0 0 auto;
-    width: 30%;
-  }
-  #create-listing .input-tf {
-    flex: 0 0 auto;
-    width: 30%;
-  }
-  #create-listing .input-numerik {
-    flex: 0 0 auto;
-    width: 30%;
-  }
-  #create-listing .inp-1 {
-    flex: 0 0 auto;
-    width: 100%;
-  }
-  #create-listing .inp-2 {
-    flex: 0 0 auto;
-    width: 47%;
-  }
-  #create-listing .inp-3 {
-    flex: 0 0 auto;
-    width: 30%;
-  }
+.buttonInputListing {
+  width: 100%;
+  height: 60px;
 }
-
-
-@media (max-width: 859px) and (min-width: 426px) {
-  #create-listing .dropdown-search {
-    flex: 0 0 auto;
-    width: 45%;
-  }
-  #create-listing .input-tf {
-    flex: 0 0 auto;
-    width: 45%;
-  }
-  #create-listing .input-numerik {
-    flex: 0 0 auto;
-    width: 45%;
-  }
-  #create-listing .inp-1 {
-    flex: 0 0 auto;
-    width: 100%;
-  }
-}
-
-@media (max-width: 425px) {
-  #create-listing .dropdown-search {
-    flex: 0 0 auto;
-    width: 100%;
-  }
-  #create-listing .input-tf {
-    flex: 0 0 auto;
-    width: 100%;
-  }
-  #create-listing .input-numerik {
-    flex: 0 0 auto;
-    width: 100%;
-  }
-} */
 
 /*--------------------------------------------------------------
 # Buat Listing

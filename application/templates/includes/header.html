@@ -45,8 +45,15 @@
                     </li>
                     <li><a class="menu" href="{{ url_for('tentang_kami')}}">Tentang Kami</a></li>
                     <li><a class="menu" href="{{ url_for('join_us')}}">Join Us</a></li>
+                    
+                    {% if session['posisi'] == 'Marketing' %}
+                    <li><a class="menu" href="{{ url_for('buat_listing')}}">Buat Listing</a></li>
+                    
+                    {% elif session['posisi'] == 'Admin' %}
                     <li><a class="menu" href="{{ url_for('buat_listing')}}">Buat Listing</a></li>
                     <li><a class="menu" href="{{ url_for('konfirm_listing')}}">Konfirm Listing</a></li>
+                    
+                    {% endif %}
                     <li><a class="menu button" href="{{ url_for('logout')}}">Keluar</a></li>
                 </ul>
                 <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->

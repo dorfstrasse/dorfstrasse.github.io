@@ -34,8 +34,8 @@ def login():
                 for data in cek_login:
                     if password == data['password']:
                         session['login'] = True
-                        session['id_team'] = data['id_team']
-                        session['nama_account'] = data['nama_account']
+                        session['id_akun'] = data['id_akun']
+                        session['nama_akun'] = data['nama_akun']
                         session['no_hp'] = data['no_hp']
                         session['posisi'] = data['posisi']
                         return redirect(url_for('home'))

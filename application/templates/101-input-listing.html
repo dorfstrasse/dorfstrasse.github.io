@@ -6,6 +6,7 @@
     <section id="create-listing">
         <div class="container">
             <form action="/submit" method="POST">
+                
                 <div class="row margintop-1cm">
                     <div class="input-form">
                         <h4>Marketing</h4>
@@ -29,7 +30,7 @@
     
                     </div>
                 </div>
-    
+
                 <div class="row margintop-1cm marginbottom-1cm">
                     <div class="input-form">
                         <h4>Properti</h4>
@@ -42,7 +43,7 @@
                                 <div class="input-wrapper">
                                     <div class="input-holder">
                                         <select class="dd-input" id="jual_sewa" name="jual_sewa">
-                                            <option value="" selected disabled>Silakan Pilih</option>
+                                            <option value="" selected disabled>Jual/Sewa</option>
                                             <option class="drop-list" value="Dijual">Dijual</option>
                                             <option class="drop-list" value="Disewa">Disewa</option>
                                             <option class="drop-list" value="Dijual dan Disewa">Dijual dan Disewa</option>
@@ -54,7 +55,7 @@
                                 <div class="input-wrapper">
                                     <div class="input-holder">
                                         <select class="dd-input" id="tipe_properti" name="tipe_properti">
-                                            <option value="" selected disabled>Silakan Pilih</option>
+                                            <option value="" selected disabled>Tipe Properti</option>
                                             <option value="Rumah">Rumah</option>
                                             <option value="Ruko">Ruko</option>
                                             <option value="Apartemen">Apartemen</option>
@@ -112,7 +113,7 @@
                                 <div class="input-wrapper">
                                     <div class="input-holder">
                                         <select class="dd-input" id="sertifikat" name="sertifikat">
-                                            <option value="" selected disabled>Silakan Pilih</option>
+                                            <option value="" selected disabled>Sertifikat</option>
                                             <option value="SHM (Surat Hak Milik)">SHM (Surat Hak Milik)</option>
                                             <option value="HGB (Hak Guna Bangunan)">HGB (Hak Guna Bangunan)</option>
                                             <option value="HS (Hak Sewa)">HS (Hak Sewa)</option>
@@ -172,15 +173,22 @@
                                 <div class="input-wrapper">
                                     <p>Rp</p>
                                     <div class="input-holder">
-                                        <input id="harga_jual" name="harga_jual" class="textFieldInput" type="text" onkeypress="return onlyNumberKey(event)" required>
+                                        <input id="harga_jual" name="harga_jual" class="textFieldInput" type="text" required>
                                         <label class="textFieldLabel" for="harga_jual">Harga Jual</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="button">Submit</button>
+
+                    <div class="submit-form">
+                        <div class="box-xl-1">
+                            <button type="submit" class="button buttonInputListing">Submit</button>
+                        </div>
+                    </div>
                 </div>
+                
+            
             </form>
         </div>
     </section>

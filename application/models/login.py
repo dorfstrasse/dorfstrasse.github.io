@@ -15,7 +15,7 @@ class Loginvalidate(object):
 			bind['email'] = email
 			bind['password'] = password
 			query = '''
-					SELECT * FROM account WHERE email = %(email)s
+					SELECT * FROM akun WHERE email = %(email)s
 					'''
 			cur.execute(query, bind)
 			data = self.rows_to_dict_list(cur)
